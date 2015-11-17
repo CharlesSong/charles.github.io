@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.changeself.net/"/>
-  <updated>2015-11-17T01:48:22.938Z</updated>
+  <updated>2015-11-17T06:23:11.447Z</updated>
   <id>http://www.changeself.net/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[github绑定域名]]></title>
+    <link href="http://www.changeself.net/2015/11/17/domain-on-github/"/>
+    <id>http://www.changeself.net/2015/11/17/domain-on-github/</id>
+    <published>2015-11-17T04:17:50.000Z</published>
+    <updated>2015-11-17T06:23:11.447Z</updated>
+    <content type="html"><![CDATA[<p>百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下</p>
+<p>CNAME内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.com</span><br></pre></td></tr></table></figure></p>
+<p>DNS设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@      A      username.github.io</span><br><span class="line">www    CNAME  username.github.io</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下</p>
+<p>CNAME内容<br><figure class="highlight bash"><table><tr><td class]]>
+    </summary>
+    
+      <category term="域名绑定、github" scheme="http://www.changeself.net/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E3%80%81github/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[新的征程、新的开始]]></title>
