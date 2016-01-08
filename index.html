@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/域名绑定、github/" style="font-size: 10px;">域名绑定、github</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/域名绑定、github/" style="font-size: 10px;">域名绑定、github</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -203,6 +203,65 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-weixin-base-userinfo-url-parameters" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/08/weixin-base-userinfo-url-parameters/" class="article-date">
+  	<time datetime="2016-01-08T04:08:54.000Z" itemprop="datePublished">2016-01-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/08/weixin-base-userinfo-url-parameters/">微信开发网页授权时URL参数问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
+<p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
+<p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意，参数必须进行编码才可行</p>
+<p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-ionic-register-back-up" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -438,7 +497,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 Charles
+    		&copy; 2016 Charles
         <a target="_blank" href="https://shop65262012.taobao.com/">平凡的百万富翁</a>
         <a target="_blank" href="http://www.tunetune.org/">tunetune女装官网</a>
         <a target="_blank" href="http://www.hanlidou.net/">韩丽都服饰官网</a>

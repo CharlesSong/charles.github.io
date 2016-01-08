@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/12 | CharlesSong&#39;s Blog</title>
+  <title>微信开发网页授权时URL参数问题 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="混生活的程序猿，巫术修炼中...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CharlesSong's Blog">
-<meta property="og:url" content="http://www.changeself.net/archives/2015/12/index.html">
+  <meta name="description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信开发网页授权时URL参数问题">
+<meta property="og:url" content="http://www.changeself.net/2016/01/08/weixin-base-userinfo-url-parameters/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="混生活的程序猿，巫术修炼中...">
+<meta property="og:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
+<meta property="og:updated_time" content="2016-01-08T04:21:55.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CharlesSong's Blog">
-<meta name="twitter:description" content="混生活的程序猿，巫术修炼中...">
+<meta name="twitter:title" content="微信开发网页授权时URL参数问题">
+<meta name="twitter:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -202,53 +203,107 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-weixin-base-userinfo-url-parameters" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/12/14/ionic-register-back-up/" class="archive-article-date">
-  	<time datetime="2015-12-14T01:50:38.000Z" itemprop="datePublished">12月 14</time>
+    <div class="article-meta">
+      <a href="/2016/01/08/weixin-base-userinfo-url-parameters/" class="article-date">
+  	<time datetime="2016-01-08T04:08:54.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/14/ionic-register-back-up/">ionic 注册返回时间</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信开发网页授权时URL参数问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic/">ionic</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
+<p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
+<p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意，参数必须进行编码才可行</p>
+<p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/14/ionic-register-back-up/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ionic 注册返回时间</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="weixin-base-userinfo-url-parameters" data-title="微信开发网页授权时URL参数问题" data-url="http://www.changeself.net/2016/01/08/weixin-base-userinfo-url-parameters/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -280,8 +335,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
