@@ -35,11 +35,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[ionic 注册返回时间]]></title>
+    <title><![CDATA[ionic 注册返回事件]]></title>
     <link href="http://www.changeself.net/2015/12/14/ionic-register-back-up/"/>
     <id>http://www.changeself.net/2015/12/14/ionic-register-back-up/</id>
     <published>2015-12-14T01:50:38.000Z</published>
-    <updated>2015-12-14T02:18:59.871Z</updated>
+    <updated>2016-01-23T01:08:56.859Z</updated>
     <content type="html"><![CDATA[<p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
 <p>都不能真正的注册到真机的物理返回键上，还是物理返回键生效</p>
 <p>通过阅读ionic的api doc 才发现registerBackButtonAction其实是有3个参数的，registerBackButtonAction(callback, priority, [actionId]);</p>
