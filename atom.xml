@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Mybatis设置全局变量]]></title>
-    <link href="http://www.changeself.net/mybatis-set-globle-parameter/"/>
-    <id>http://www.changeself.net/mybatis-set-globle-parameter/</id>
+    <link href="http://www.changeself.net//articles/mybatis-set-globle-parameter/"/>
+    <id>http://www.changeself.net//articles/mybatis-set-globle-parameter/</id>
     <published>2016-04-05T07:29:02.000Z</published>
     <updated>2016-04-05T08:18:41.909Z</updated>
     <content type="html"><![CDATA[<p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="property">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="type">class</span>=<span class="string">"org.mybatis.spring.SqlSessionFactoryBean"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"dataSource"</span> <span class="keyword">ref</span>=<span class="string">"dataSource"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configLocation"</span> value=<span class="string">"classpath:mybatis/mybatis-config.xml"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configurationProperties"</span>&gt;</span><br><span class="line">        &lt;props&gt;</span><br><span class="line">            &lt;<span class="keyword">prop</span> key=<span class="string">"dbType"</span>&gt;oracle&lt;/<span class="keyword">prop</span>&gt;</span><br><span class="line">        &lt;/props&gt;</span><br><span class="line">    &lt;/<span class="keyword">property</span>&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
@@ -32,8 +32,8 @@
   
   <entry>
     <title><![CDATA[java实现webuploader跨域上传]]></title>
-    <link href="http://www.changeself.net/webuploader-cros-java/"/>
-    <id>http://www.changeself.net/webuploader-cros-java/</id>
+    <link href="http://www.changeself.net//articles/webuploader-cros-java/"/>
+    <id>http://www.changeself.net//articles/webuploader-cros-java/</id>
     <published>2016-03-15T06:00:22.000Z</published>
     <updated>2016-03-15T06:17:08.850Z</updated>
     <content type="html"><![CDATA[<p>项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。</p>
@@ -52,8 +52,8 @@
   
   <entry>
     <title><![CDATA[微信开发网页授权时URL参数问题]]></title>
-    <link href="http://www.changeself.net/weixin-base-userinfo-url-parameters/"/>
-    <id>http://www.changeself.net/weixin-base-userinfo-url-parameters/</id>
+    <link href="http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/"/>
+    <id>http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/</id>
     <published>2016-01-08T04:08:54.000Z</published>
     <updated>2016-01-08T04:21:55.052Z</updated>
     <content type="html"><![CDATA[<p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
@@ -72,8 +72,8 @@
   
   <entry>
     <title><![CDATA[ionic 注册返回事件]]></title>
-    <link href="http://www.changeself.net/ionic-register-back-up/"/>
-    <id>http://www.changeself.net/ionic-register-back-up/</id>
+    <link href="http://www.changeself.net//articles/ionic-register-back-up/"/>
+    <id>http://www.changeself.net//articles/ionic-register-back-up/</id>
     <published>2015-12-14T01:50:38.000Z</published>
     <updated>2016-01-23T01:08:56.859Z</updated>
     <content type="html"><![CDATA[<p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
@@ -92,8 +92,8 @@
   
   <entry>
     <title><![CDATA[github绑定域名]]></title>
-    <link href="http://www.changeself.net/domain-on-github/"/>
-    <id>http://www.changeself.net/domain-on-github/</id>
+    <link href="http://www.changeself.net//articles/domain-on-github/"/>
+    <id>http://www.changeself.net//articles/domain-on-github/</id>
     <published>2015-11-17T04:17:50.000Z</published>
     <updated>2015-11-17T06:29:31.615Z</updated>
     <content type="html"><![CDATA[<p>百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下</p>
@@ -111,8 +111,8 @@
   
   <entry>
     <title><![CDATA[新的征程、新的开始]]></title>
-    <link href="http://www.changeself.net/new-journey/"/>
-    <id>http://www.changeself.net/new-journey/</id>
+    <link href="http://www.changeself.net//articles/new-journey/"/>
+    <id>http://www.changeself.net//articles/new-journey/</id>
     <published>2015-11-16T09:58:49.000Z</published>
     <updated>2015-11-17T01:48:22.938Z</updated>
     <content type="html"><![CDATA[<p>博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！</p>
@@ -129,8 +129,8 @@
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://www.changeself.net/hello-world/"/>
-    <id>http://www.changeself.net/hello-world/</id>
+    <link href="http://www.changeself.net//articles/hello-world/"/>
+    <id>http://www.changeself.net//articles/hello-world/</id>
     <published>2015-11-16T04:58:49.000Z</published>
     <updated>2015-11-16T12:02:16.902Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>

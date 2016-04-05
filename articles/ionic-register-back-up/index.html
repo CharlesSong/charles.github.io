@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>java实现webuploader跨域上传 | CharlesSong&#39;s Blog</title>
+  <title>ionic 注册返回事件 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。
-webuploader进行上传，会执行2个请求；一个option请求，一个post（根据你的webuploader的配置method 值决定），需要在option请求">
+  <meta name="description" content="使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践1231.$ionicPlatform.registerBackButtonAction(callback)2. document.addEventListener(&quot;backbutton&quot;, function()&amp;#123;&amp;#125;, false);
+都不能真正">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java实现webuploader跨域上传">
-<meta property="og:url" content="http://www.changeself.net/webuploader-cros-java/index.html">
+<meta property="og:title" content="ionic 注册返回事件">
+<meta property="og:url" content="http://www.changeself.net/articles/ionic-register-back-up/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。
-webuploader进行上传，会执行2个请求；一个option请求，一个post（根据你的webuploader的配置method 值决定），需要在option请求">
-<meta property="og:updated_time" content="2016-03-15T06:17:08.850Z">
+<meta property="og:description" content="使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践1231.$ionicPlatform.registerBackButtonAction(callback)2. document.addEventListener(&quot;backbutton&quot;, function()&amp;#123;&amp;#125;, false);
+都不能真正">
+<meta property="og:updated_time" content="2016-01-23T01:08:56.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java实现webuploader跨域上传">
-<meta name="twitter:description" content="项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。
-webuploader进行上传，会执行2个请求；一个option请求，一个post（根据你的webuploader的配置method 值决定），需要在option请求">
+<meta name="twitter:title" content="ionic 注册返回事件">
+<meta name="twitter:description" content="使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践1231.$ionicPlatform.registerBackButtonAction(callback)2. document.addEventListener(&quot;backbutton&quot;, function()&amp;#123;&amp;#125;, false);
+都不能真正">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -206,11 +206,11 @@ webuploader进行上传，会执行2个请求；一个option请求，一个post�
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-webuploader-cros-java" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ionic-register-back-up" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/webuploader-cros-java/" class="article-date">
-  	<time datetime="2016-03-15T06:00:22.000Z" itemprop="datePublished">2016-03-15</time>
+      <a href="/articles/ionic-register-back-up/" class="article-date">
+  	<time datetime="2015-12-14T01:50:38.000Z" itemprop="datePublished">2015-12-14</time>
 </a>
     </div>
   
@@ -223,7 +223,7 @@ webuploader进行上传，会执行2个请求；一个option请求，一个post�
         
   
     <h1 class="article-title" itemprop="name">
-      java实现webuploader跨域上传
+      ionic 注册返回事件
     </h1>
   
 
@@ -232,7 +232,7 @@ webuploader进行上传，会执行2个请求；一个option请求，一个post�
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java-webuploader-跨域/">java, webuploader,跨域</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic/">ionic</a></li></ul>
 	</div>
 
         
@@ -243,10 +243,11 @@ webuploader进行上传，会执行2个请求；一个option请求，一个post�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。</p>
-<p>webuploader进行上传，会执行2个请求；一个option请求，一个post（根据你的webuploader的配置method 值决定），需要在option请求中对响应头进行处理，post响应头也进行响应的处理。</p>
-<p>以servlet为例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@WebServlet</span>(description = <span class="string">"文件上传"</span>,value = &#123;<span class="string">"/file/upload"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUpload</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FileUpload</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="comment">//文件上传逻辑</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doOptions</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Credentials"</span>, <span class="string">"false"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="keyword">super</span>.doOptions(req, resp);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>再次测试跨域上传，正常</p>
+        <p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p>都不能真正的注册到真机的物理返回键上，还是物理返回键生效</p>
+<p>通过阅读ionic的api doc 才发现registerBackButtonAction其实是有3个参数的，registerBackButtonAction(callback, priority, [actionId]);</p>
+<p>priority(必须)：优先级，数值越大先执行，并且有一些特别的级别<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span>——返回上一个视图</span><br><span class="line"><span class="number">150</span>——关闭侧边按钮</span><br><span class="line"><span class="number">300</span>——关闭action sheet</span><br><span class="line"><span class="number">200</span>——取消模态框</span><br><span class="line"><span class="number">400</span>——取消popup</span><br><span class="line"><span class="number">500</span>——取消loading overlay</span><br></pre></td></tr></table></figure></p>
+<p>对了，监听物理返回键别忘了引入Cordova.js哦</p>
 
       
     </div>
@@ -256,18 +257,18 @@ webuploader进行上传，会执行2个请求；一个option请求，一个post�
     
 <nav id="article-nav">
   
-    <a href="/mybatis-set-globle-parameter/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/articles/weixin-base-userinfo-url-parameters/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Mybatis设置全局变量
+          微信开发网页授权时URL参数问题
         
       </div>
     </a>
   
   
-    <a href="/weixin-base-userinfo-url-parameters/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微信开发网页授权时URL参数问题</div>
+    <a href="/articles/domain-on-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">github绑定域名</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -296,7 +297,7 @@ webuploader进行上传，会执行2个请求；一个option请求，一个post�
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="webuploader-cros-java" data-title="java实现webuploader跨域上传" data-url="http://www.changeself.net/webuploader-cros-java/"></div>
+	<div class="ds-thread" data-thread-key="ionic-register-back-up" data-title="ionic 注册返回事件" data-url="http://www.changeself.net/articles/ionic-register-back-up/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

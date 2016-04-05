@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mybatis设置全局变量 | CharlesSong&#39;s Blog</title>
+  <title>微信开发网页授权时URL参数问题 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;可通过configurationProperties参数设置，设置方法如下：123456789&amp;lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&amp;gt;    &amp;lt;pr">
+  <meta name="description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mybatis设置全局变量">
-<meta property="og:url" content="http://www.changeself.net/mybatis-set-globle-parameter/index.html">
+<meta property="og:title" content="微信开发网页授权时URL参数问题">
+<meta property="og:url" content="http://www.changeself.net/articles/weixin-base-userinfo-url-parameters/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;可通过configurationProperties参数设置，设置方法如下：123456789&amp;lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&amp;gt;    &amp;lt;pr">
-<meta property="og:updated_time" content="2016-04-05T08:18:41.909Z">
+<meta property="og:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
+<meta property="og:updated_time" content="2016-01-08T04:21:55.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mybatis设置全局变量">
-<meta name="twitter:description" content="mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;可通过configurationProperties参数设置，设置方法如下：123456789&amp;lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&amp;gt;    &amp;lt;pr">
+<meta name="twitter:title" content="微信开发网页授权时URL参数问题">
+<meta name="twitter:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -203,11 +203,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-mybatis-set-globle-parameter" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-weixin-base-userinfo-url-parameters" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/mybatis-set-globle-parameter/" class="article-date">
-  	<time datetime="2016-04-05T07:29:02.000Z" itemprop="datePublished">2016-04-05</time>
+      <a href="/articles/weixin-base-userinfo-url-parameters/" class="article-date">
+  	<time datetime="2016-01-08T04:08:54.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -220,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Mybatis设置全局变量
+      微信开发网页授权时URL参数问题
     </h1>
   
 
@@ -229,7 +229,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mybatis-全局变量/">-mybatis -全局变量</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
 	</div>
 
         
@@ -240,7 +240,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="property">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="type">class</span>=<span class="string">"org.mybatis.spring.SqlSessionFactoryBean"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"dataSource"</span> <span class="keyword">ref</span>=<span class="string">"dataSource"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configLocation"</span> value=<span class="string">"classpath:mybatis/mybatis-config.xml"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configurationProperties"</span>&gt;</span><br><span class="line">        &lt;props&gt;</span><br><span class="line">            &lt;<span class="keyword">prop</span> key=<span class="string">"dbType"</span>&gt;oracle&lt;/<span class="keyword">prop</span>&gt;</span><br><span class="line">        &lt;/props&gt;</span><br><span class="line">    &lt;/<span class="keyword">property</span>&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
+        <p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
+<p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
+<p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意，参数必须进行编码才可行</p>
+<p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
 
       
     </div>
@@ -250,9 +254,18 @@
     
 <nav id="article-nav">
   
+    <a href="/articles/webuploader-cros-java/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          java实现webuploader跨域上传
+        
+      </div>
+    </a>
   
-    <a href="/webuploader-cros-java/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java实现webuploader跨域上传</div>
+  
+    <a href="/articles/ionic-register-back-up/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ionic 注册返回事件</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -281,7 +294,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="mybatis-set-globle-parameter" data-title="Mybatis设置全局变量" data-url="http://www.changeself.net/mybatis-set-globle-parameter/"></div>
+	<div class="ds-thread" data-thread-key="weixin-base-userinfo-url-parameters" data-title="微信开发网页授权时URL参数问题" data-url="http://www.changeself.net/articles/weixin-base-userinfo-url-parameters/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

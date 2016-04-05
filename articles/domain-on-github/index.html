@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>微信开发网页授权时URL参数问题 | CharlesSong&#39;s Blog</title>
+  <title>github绑定域名 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
+  <meta name="description" content="百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下
+CNAME内容1xxx.com
+DNS设置12@      A      username.github.iowww    CNAME  username.github.io">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信开发网页授权时URL参数问题">
-<meta property="og:url" content="http://www.changeself.net/weixin-base-userinfo-url-parameters/index.html">
+<meta property="og:title" content="github绑定域名">
+<meta property="og:url" content="http://www.changeself.net/articles/domain-on-github/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
-<meta property="og:updated_time" content="2016-01-08T04:21:55.052Z">
+<meta property="og:description" content="百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下
+CNAME内容1xxx.com
+DNS设置12@      A      username.github.iowww    CNAME  username.github.io">
+<meta property="og:updated_time" content="2015-11-17T06:29:31.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信开发网页授权时URL参数问题">
-<meta name="twitter:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
+<meta name="twitter:title" content="github绑定域名">
+<meta name="twitter:description" content="百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下
+CNAME内容1xxx.com
+DNS设置12@      A      username.github.iowww    CNAME  username.github.io">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -203,11 +209,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-weixin-base-userinfo-url-parameters" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-domain-on-github" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/weixin-base-userinfo-url-parameters/" class="article-date">
-  	<time datetime="2016-01-08T04:08:54.000Z" itemprop="datePublished">2016-01-08</time>
+      <a href="/articles/domain-on-github/" class="article-date">
+  	<time datetime="2015-11-17T04:17:50.000Z" itemprop="datePublished">2015-11-17</time>
 </a>
     </div>
   
@@ -220,7 +226,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      微信开发网页授权时URL参数问题
+      github绑定域名
     </h1>
   
 
@@ -229,7 +235,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/域名绑定、github/">域名绑定、github</a></li></ul>
 	</div>
 
         
@@ -240,11 +246,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
-<p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
-<p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意，参数必须进行编码才可行</p>
-<p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
+        <p>百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下</p>
+<p>CNAME内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.com</span><br></pre></td></tr></table></figure></p>
+<p>DNS设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@      A      username.github.io</span><br><span class="line">www    CNAME  username.github.io</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -254,18 +258,18 @@
     
 <nav id="article-nav">
   
-    <a href="/webuploader-cros-java/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/articles/ionic-register-back-up/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          java实现webuploader跨域上传
+          ionic 注册返回事件
         
       </div>
     </a>
   
   
-    <a href="/ionic-register-back-up/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ionic 注册返回事件</div>
+    <a href="/articles/new-journey/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">新的征程、新的开始</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -294,7 +298,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="weixin-base-userinfo-url-parameters" data-title="微信开发网页授权时URL参数问题" data-url="http://www.changeself.net/weixin-base-userinfo-url-parameters/"></div>
+	<div class="ds-thread" data-thread-key="domain-on-github" data-title="github绑定域名" data-url="http://www.changeself.net/articles/domain-on-github/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
