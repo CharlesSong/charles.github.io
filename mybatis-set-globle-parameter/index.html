@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>新的征程、新的开始 | CharlesSong&#39;s Blog</title>
+  <title>Mybatis设置全局变量 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！
-新的博客由Hexo 生成静态文件，采用Yilia主题放置在Github上,在此特别感谢Github、Hexo与黎小腾君！">
+  <meta name="description" content="mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;可通过configurationProperties参数设置，设置方法如下：123456789&amp;lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&amp;gt;    &amp;lt;pr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新的征程、新的开始">
-<meta property="og:url" content="http://www.changeself.net/2015/11/16/new-journey/index.html">
+<meta property="og:title" content="Mybatis设置全局变量">
+<meta property="og:url" content="http://www.changeself.net/mybatis-set-globle-parameter/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！
-新的博客由Hexo 生成静态文件，采用Yilia主题放置在Github上,在此特别感谢Github、Hexo与黎小腾君！">
-<meta property="og:updated_time" content="2015-11-17T01:48:22.938Z">
+<meta property="og:description" content="mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;可通过configurationProperties参数设置，设置方法如下：123456789&amp;lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&amp;gt;    &amp;lt;pr">
+<meta property="og:updated_time" content="2016-04-05T08:18:41.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新的征程、新的开始">
-<meta name="twitter:description" content="博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！
-新的博客由Hexo 生成静态文件，采用Yilia主题放置在Github上,在此特别感谢Github、Hexo与黎小腾君！">
+<meta name="twitter:title" content="Mybatis设置全局变量">
+<meta name="twitter:description" content="mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;可通过configurationProperties参数设置，设置方法如下：123456789&amp;lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&amp;gt;    &amp;lt;pr">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -206,11 +203,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-new-journey" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-mybatis-set-globle-parameter" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/16/new-journey/" class="article-date">
-  	<time datetime="2015-11-16T09:58:49.000Z" itemprop="datePublished">2015-11-16</time>
+      <a href="/mybatis-set-globle-parameter/" class="article-date">
+  	<time datetime="2016-04-05T07:29:02.000Z" itemprop="datePublished">2016-04-05</time>
 </a>
     </div>
   
@@ -223,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      新的征程、新的开始
+      Mybatis设置全局变量
     </h1>
   
 
@@ -232,7 +229,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mybatis-全局变量/">-mybatis -全局变量</a></li></ul>
 	</div>
 
         
@@ -243,8 +240,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！</p>
-<p>新的博客由<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> 生成静态文件，采用<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a>主题放置在Github上,在此特别感谢Github、Hexo与黎小腾君！</p>
+        <p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="property">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="type">class</span>=<span class="string">"org.mybatis.spring.SqlSessionFactoryBean"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"dataSource"</span> <span class="keyword">ref</span>=<span class="string">"dataSource"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configLocation"</span> value=<span class="string">"classpath:mybatis/mybatis-config.xml"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configurationProperties"</span>&gt;</span><br><span class="line">        &lt;props&gt;</span><br><span class="line">            &lt;<span class="keyword">prop</span> key=<span class="string">"dbType"</span>&gt;oracle&lt;/<span class="keyword">prop</span>&gt;</span><br><span class="line">        &lt;/props&gt;</span><br><span class="line">    &lt;/<span class="keyword">property</span>&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -254,18 +250,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/17/domain-on-github/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          github绑定域名
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/webuploader-cros-java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java实现webuploader跨域上传</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -294,7 +281,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="new-journey" data-title="新的征程、新的开始" data-url="http://www.changeself.net/2015/11/16/new-journey/"></div>
+	<div class="ds-thread" data-thread-key="mybatis-set-globle-parameter" data-title="Mybatis设置全局变量" data-url="http://www.changeself.net/mybatis-set-globle-parameter/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

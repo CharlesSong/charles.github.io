@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>微信开发网页授权时URL参数问题 | CharlesSong&#39;s Blog</title>
+  <title>ionic 注册返回事件 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
+  <meta name="description" content="使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践1231.$ionicPlatform.registerBackButtonAction(callback)2. document.addEventListener(&quot;backbutton&quot;, function()&amp;#123;&amp;#125;, false);
+都不能真正">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信开发网页授权时URL参数问题">
-<meta property="og:url" content="http://www.changeself.net/2016/01/08/weixin-base-userinfo-url-parameters/index.html">
+<meta property="og:title" content="ionic 注册返回事件">
+<meta property="og:url" content="http://www.changeself.net/ionic-register-back-up/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
-<meta property="og:updated_time" content="2016-01-08T04:21:55.052Z">
+<meta property="og:description" content="使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践1231.$ionicPlatform.registerBackButtonAction(callback)2. document.addEventListener(&quot;backbutton&quot;, function()&amp;#123;&amp;#125;, false);
+都不能真正">
+<meta property="og:updated_time" content="2016-01-23T01:08:56.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信开发网页授权时URL参数问题">
-<meta name="twitter:description" content="微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如1https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;amp;redirect_uri=http://ip:port/app/method?appid=1&amp;amp;appType=service&amp;amp;r">
+<meta name="twitter:title" content="ionic 注册返回事件">
+<meta name="twitter:description" content="使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践1231.$ionicPlatform.registerBackButtonAction(callback)2. document.addEventListener(&quot;backbutton&quot;, function()&amp;#123;&amp;#125;, false);
+都不能真正">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -203,11 +206,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-weixin-base-userinfo-url-parameters" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ionic-register-back-up" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/08/weixin-base-userinfo-url-parameters/" class="article-date">
-  	<time datetime="2016-01-08T04:08:54.000Z" itemprop="datePublished">2016-01-08</time>
+      <a href="/ionic-register-back-up/" class="article-date">
+  	<time datetime="2015-12-14T01:50:38.000Z" itemprop="datePublished">2015-12-14</time>
 </a>
     </div>
   
@@ -220,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      微信开发网页授权时URL参数问题
+      ionic 注册返回事件
     </h1>
   
 
@@ -229,7 +232,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic/">ionic</a></li></ul>
 	</div>
 
         
@@ -240,11 +243,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
-<p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
-<p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意，参数必须进行编码才可行</p>
-<p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
+        <p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p>都不能真正的注册到真机的物理返回键上，还是物理返回键生效</p>
+<p>通过阅读ionic的api doc 才发现registerBackButtonAction其实是有3个参数的，registerBackButtonAction(callback, priority, [actionId]);</p>
+<p>priority(必须)：优先级，数值越大先执行，并且有一些特别的级别<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span>——返回上一个视图</span><br><span class="line"><span class="number">150</span>——关闭侧边按钮</span><br><span class="line"><span class="number">300</span>——关闭action sheet</span><br><span class="line"><span class="number">200</span>——取消模态框</span><br><span class="line"><span class="number">400</span>——取消popup</span><br><span class="line"><span class="number">500</span>——取消loading overlay</span><br></pre></td></tr></table></figure></p>
+<p>对了，监听物理返回键别忘了引入Cordova.js哦</p>
 
       
     </div>
@@ -254,18 +257,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/15/webuploader-cros-java/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/weixin-base-userinfo-url-parameters/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          java实现webuploader跨域上传
+          微信开发网页授权时URL参数问题
         
       </div>
     </a>
   
   
-    <a href="/2015/12/14/ionic-register-back-up/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ionic 注册返回事件</div>
+    <a href="/domain-on-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">github绑定域名</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -294,7 +297,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="weixin-base-userinfo-url-parameters" data-title="微信开发网页授权时URL参数问题" data-url="http://www.changeself.net/2016/01/08/weixin-base-userinfo-url-parameters/"></div>
+	<div class="ds-thread" data-thread-key="ionic-register-back-up" data-title="ionic 注册返回事件" data-url="http://www.changeself.net/ionic-register-back-up/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
