@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.changeself.net//articles/jquery-when-array/</loc>
+    <lastmod>2016-07-04T13:54:06.023Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.changeself.net//articles/say/</loc>
+    <lastmod>2016-04-27T09:07:23.565Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.changeself.net//articles/mybatis-set-globle-parameter/</loc>
     <lastmod>2016-04-21T12:34:19.461Z</lastmod>
   </url>

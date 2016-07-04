@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/mybatis-全局变量/" style="font-size: 10px;">-mybatis -全局变量</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/java-webuploader-跨域/" style="font-size: 10px;">java, webuploader,跨域</a> <a href="/tags/域名绑定、github/" style="font-size: 10px;">域名绑定、github</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/mybatis-全局变量/" style="font-size: 10px;">-mybatis -全局变量</a> <a href="/tags/array/" style="font-size: 10px;">array</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/java-webuploader-跨域/" style="font-size: 10px;">java, webuploader,跨域</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/when/" style="font-size: 10px;">when</a> <a href="/tags/域名绑定、github/" style="font-size: 10px;">域名绑定、github</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -203,6 +203,110 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-jquery-when-array" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/articles/jquery-when-array/" class="article-date">
+  	<time datetime="2016-07-04T13:42:36.000Z" itemprop="datePublished">2016-07-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/articles/jquery-when-array/">$.when(array)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var promises = [&#10;&#9;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(5000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(6000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;];&#10;&#9;$.when.apply($, promises).then(function(schemas) &#123;&#10;&#9;&#9;console.log(&#34;DONE&#34;, this, schemas);&#10;&#9;&#125;, function(e) &#123;&#10;&#9;&#9;console.log(&#39;FAIL&#39;);&#10;&#9;&#125;);&#10;&#9;var i=0;&#10;&#9;function ajaxs(timeout) &#123;&#10;&#9;&#9;var dtd = $.Deferred();&#10;&#9;&#9;setTimeout(function() &#123;&#10;&#9;&#9;&#9;if(i%2==0)&#123;&#10;&#9;&#9;&#9;&#9;dtd.resolve(timeout);&#10;&#9;&#9;&#9;&#125;else&#123;&#10;&#9;&#9;&#9;&#9;dtd.reject(timeout);&#10;&#9;&#9;&#9;&#125;&#10;&#9;&#9;&#9;i++;&#10;&#9;&#9;&#125;, timeout);&#10;&#9;&#9;return dtd.promise();&#10;&#9;&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/when/">when</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="friendship-say" class="article article-type-friendship" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/articles/say/" class="article-date">
+  	<time datetime="2016-04-27T09:07:23.000Z" itemprop="datePublished">2016-04-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/articles/say/">say</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-mybatis-set-globle-parameter" class="article article-type-post" itemscope itemprop="blogPost">
   
