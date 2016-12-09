@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>$.when(array) | CharlesSong&#39;s Blog</title>
+  <title>Archives: 2016/12 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
-<meta property="og:type" content="article">
-<meta property="og:title" content="$.when(array)">
-<meta property="og:url" content="http://www.changeself.net/articles/jquery-when-array/index.html">
+  <meta name="description" content="混生活的程序猿，巫术修炼中...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CharlesSong's Blog">
+<meta property="og:url" content="http://www.changeself.net/archives/2016/12/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
-<meta property="og:updated_time" content="2016-07-04T13:58:31.825Z">
+<meta property="og:description" content="混生活的程序猿，巫术修炼中...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="$.when(array)">
-<meta name="twitter:description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
+<meta name="twitter:title" content="CharlesSong's Blog">
+<meta name="twitter:description" content="混生活的程序猿，巫术修炼中...">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -203,111 +202,53 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-jquery-when-array" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/articles/jquery-when-array/" class="article-date">
-  	<time datetime="2016-07-04T13:42:36.000Z" itemprop="datePublished">2016-07-04</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/articles/ORA-12155-Error/" class="archive-article-date">
+  	<time datetime="2016-12-09T01:50:36.000Z" itemprop="datePublished">12月 9</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      $.when(array)
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/articles/ORA-12155-Error/">ORA-12155 Error</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/when/">when</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ORA-12155/">ORA-12155</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/异常-DevOps/">异常;DevOps</a></li></ul>
 	</div>
 
-        
+          
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var promises = [&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(5000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(6000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;];&#10;&#10;&#10;$.when.apply($, promises).then(function(schemas) &#123;&#10;&#9;console.log(&#34;DONE&#34;, this, schemas);&#10;&#125;, function(e) &#123;&#10;&#9;console.log(&#39;FAIL&#39;);&#10;&#125;);&#10;&#10;&#10;&#10;var i=0;&#10;function ajaxs(timeout) &#123;&#10;&#9;var dtd = $.Deferred();&#10;&#9;setTimeout(function() &#123;&#10;&#9;&#9;if(i%2==0)&#123;&#10;&#9;&#9;&#9;dtd.resolve(timeout);&#10;&#9;&#9;&#125;else&#123;&#10;&#9;&#9;&#9;dtd.reject(timeout);&#10;&#9;&#9;&#125;&#10;&#9;&#9;i++;&#10;&#9;&#125;, timeout);&#10;&#9;return dtd.promise();&#10;&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/articles/an-ajax-status0-error-caused-the-problem/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          an-ajax-status0-error-caused-the-problem
-        
-      </div>
-    </a>
-  
-  
-    <a href="/articles/mybatis-set-globle-parameter/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mybatis设置全局变量</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="jquery-when-array" data-title="$.when(array)" data-url="http://www.changeself.net/articles/jquery-when-array/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -339,8 +280,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>$.when(array) | CharlesSong&#39;s Blog</title>
+  <title>an-ajax-status0-error-caused-the-problem | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
+  <meta name="description" content="Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。
+服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="$.when(array)">
-<meta property="og:url" content="http://www.changeself.net/articles/jquery-when-array/index.html">
+<meta property="og:title" content="an-ajax-status0-error-caused-the-problem">
+<meta property="og:url" content="http://www.changeself.net/articles/an-ajax-status0-error-caused-the-problem/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
-<meta property="og:updated_time" content="2016-07-04T13:58:31.825Z">
+<meta property="og:description" content="Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。
+服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。">
+<meta property="og:updated_time" content="2016-12-09T03:26:58.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="$.when(array)">
-<meta name="twitter:description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
+<meta name="twitter:title" content="an-ajax-status0-error-caused-the-problem">
+<meta name="twitter:description" content="Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。
+服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -203,11 +206,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-jquery-when-array" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-an-ajax-status0-error-caused-the-problem" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/articles/jquery-when-array/" class="article-date">
-  	<time datetime="2016-07-04T13:42:36.000Z" itemprop="datePublished">2016-07-04</time>
+      <a href="/articles/an-ajax-status0-error-caused-the-problem/" class="article-date">
+  	<time datetime="2016-10-18T02:10:08.000Z" itemprop="datePublished">2016-10-18</time>
 </a>
     </div>
   
@@ -220,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      $.when(array)
+      an-ajax-status0-error-caused-the-problem
     </h1>
   
 
@@ -229,7 +232,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/when/">when</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status0/">status0</a></li></ul>
 	</div>
 
         
@@ -240,7 +243,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var promises = [&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(5000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(6000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;];&#10;&#10;&#10;$.when.apply($, promises).then(function(schemas) &#123;&#10;&#9;console.log(&#34;DONE&#34;, this, schemas);&#10;&#125;, function(e) &#123;&#10;&#9;console.log(&#39;FAIL&#39;);&#10;&#125;);&#10;&#10;&#10;&#10;var i=0;&#10;function ajaxs(timeout) &#123;&#10;&#9;var dtd = $.Deferred();&#10;&#9;setTimeout(function() &#123;&#10;&#9;&#9;if(i%2==0)&#123;&#10;&#9;&#9;&#9;dtd.resolve(timeout);&#10;&#9;&#9;&#125;else&#123;&#10;&#9;&#9;&#9;dtd.reject(timeout);&#10;&#9;&#9;&#125;&#10;&#9;&#9;i++;&#10;&#9;&#125;, timeout);&#10;&#9;return dtd.promise();&#10;&#125;</span><br></pre></td></tr></table></figure>
+        <p>Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。</p>
+<p>服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。</p>
+
       
     </div>
     
@@ -249,18 +254,18 @@
     
 <nav id="article-nav">
   
-    <a href="/articles/an-ajax-status0-error-caused-the-problem/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/articles/ORA-12155-Error/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          an-ajax-status0-error-caused-the-problem
+          ORA-12155 Error
         
       </div>
     </a>
   
   
-    <a href="/articles/mybatis-set-globle-parameter/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mybatis设置全局变量</div>
+    <a href="/articles/jquery-when-array/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">$.when(array)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -289,7 +294,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="jquery-when-array" data-title="$.when(array)" data-url="http://www.changeself.net/articles/jquery-when-array/"></div>
+	<div class="ds-thread" data-thread-key="an-ajax-status0-error-caused-the-problem" data-title="an-ajax-status0-error-caused-the-problem" data-url="http://www.changeself.net/articles/an-ajax-status0-error-caused-the-problem/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.changeself.net/"/>
-  <updated>2016-07-04T13:58:31.825Z</updated>
+  <updated>2016-12-09T03:27:12.137Z</updated>
   <id>http://www.changeself.net/</id>
   
   <author>
@@ -13,6 +13,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[ORA-12155 Error]]></title>
+    <link href="http://www.changeself.net//articles/ORA-12155-Error/"/>
+    <id>http://www.changeself.net//articles/ORA-12155-Error/</id>
+    <published>2016-12-09T01:50:36.000Z</published>
+    <updated>2016-12-09T03:27:12.137Z</updated>
+    <content type="html"><![CDATA[<p>最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，<br>百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。</p>
+<p>后来想到TNS、Internal error代表的是网络间的异常，会不会是驱动jar包的问题呢。到官网下载了一个官方的ojdbc6.jar（Oracle11g）替换了下驱动，经过测试，果然是驱动包的问题。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，<br>百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。]]>
+    </summary>
+    
+      <category term="ORA-12155" scheme="http://www.changeself.net/tags/ORA-12155/"/>
+    
+      <category term="oracle" scheme="http://www.changeself.net/tags/oracle/"/>
+    
+      <category term="异常;DevOps" scheme="http://www.changeself.net/tags/%E5%BC%82%E5%B8%B8-DevOps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[an-ajax-status0-error-caused-the-problem]]></title>
+    <link href="http://www.changeself.net//articles/an-ajax-status0-error-caused-the-problem/"/>
+    <id>http://www.changeself.net//articles/an-ajax-status0-error-caused-the-problem/</id>
+    <published>2016-10-18T02:10:08.000Z</published>
+    <updated>2016-12-09T03:26:58.446Z</updated>
+    <content type="html"><![CDATA[<p>Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。</p>
+<p>服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。</p>
+<p>服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。</p>
+]]>
+    </summary>
+    
+      <category term="DevOps" scheme="http://www.changeself.net/tags/DevOps/"/>
+    
+      <category term="ajax" scheme="http://www.changeself.net/tags/ajax/"/>
+    
+      <category term="status0" scheme="http://www.changeself.net/tags/status0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[$.when(array)]]></title>
@@ -34,24 +78,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[say]]></title>
-    <link href="http://www.changeself.net//articles/say/"/>
-    <id>http://www.changeself.net//articles/say/</id>
-    <published>2016-04-27T09:07:23.000Z</published>
-    <updated>2016-04-27T09:07:23.565Z</updated>
-    <content type="html"></content>
-    <summary type="html">
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Mybatis设置全局变量]]></title>
     <link href="http://www.changeself.net//articles/mybatis-set-globle-parameter/"/>
     <id>http://www.changeself.net//articles/mybatis-set-globle-parameter/</id>
     <published>2016-04-05T07:29:02.000Z</published>
-    <updated>2016-04-21T12:34:19.461Z</updated>
+    <updated>2016-12-09T03:27:30.720Z</updated>
     <content type="html"><![CDATA[<p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="property">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="type">class</span>=<span class="string">"org.mybatis.spring.SqlSessionFactoryBean"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"dataSource"</span> <span class="keyword">ref</span>=<span class="string">"dataSource"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configLocation"</span> value=<span class="string">"classpath:mybatis/mybatis-config.xml"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configurationProperties"</span>&gt;</span><br><span class="line">        &lt;props&gt;</span><br><span class="line">            &lt;<span class="keyword">prop</span> key=<span class="string">"dbType"</span>&gt;oracle&lt;/<span class="keyword">prop</span>&gt;</span><br><span class="line">        &lt;/props&gt;</span><br><span class="line">    &lt;/<span class="keyword">property</span>&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
 <p>java中获取此参数可以通过：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlSessionFactory.getConfiguration().getVariables().getProperty(<span class="string">"dbType"</span>)</span><br></pre></td></tr></table></figure></p>
 ]]></content>
@@ -59,7 +90,11 @@
     <![CDATA[<p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applesc]]>
     </summary>
     
-      <category term="-mybatis -全局变量" scheme="http://www.changeself.net/tags/mybatis-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/"/>
+      <category term="globle parameter" scheme="http://www.changeself.net/tags/globle-parameter/"/>
+    
+      <category term="mybatis" scheme="http://www.changeself.net/tags/mybatis/"/>
+    
+      <category term="全局变量" scheme="http://www.changeself.net/tags/%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
@@ -68,7 +103,7 @@
     <link href="http://www.changeself.net//articles/webuploader-cros-java/"/>
     <id>http://www.changeself.net//articles/webuploader-cros-java/</id>
     <published>2016-03-15T06:00:22.000Z</published>
-    <updated>2016-03-15T06:17:08.850Z</updated>
+    <updated>2016-12-09T01:57:04.264Z</updated>
     <content type="html"><![CDATA[<p>项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。</p>
 <p>webuploader进行上传，会执行2个请求；一个option请求，一个post（根据你的webuploader的配置method 值决定），需要在option请求中对响应头进行处理，post响应头也进行响应的处理。</p>
 <p>以servlet为例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@WebServlet</span>(description = <span class="string">"文件上传"</span>,value = &#123;<span class="string">"/file/upload"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUpload</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FileUpload</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="comment">//文件上传逻辑</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doOptions</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Credentials"</span>, <span class="string">"false"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="keyword">super</span>.doOptions(req, resp);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
@@ -79,7 +114,11 @@
 <p>webuploader进行]]>
     </summary>
     
-      <category term="java, webuploader,跨域" scheme="http://www.changeself.net/tags/java-webuploader-%E8%B7%A8%E5%9F%9F/"/>
+      <category term="java" scheme="http://www.changeself.net/tags/java/"/>
+    
+      <category term="webuploader" scheme="http://www.changeself.net/tags/webuploader/"/>
+    
+      <category term="跨域" scheme="http://www.changeself.net/tags/%E8%B7%A8%E5%9F%9F/"/>
     
   </entry>
   
@@ -88,7 +127,7 @@
     <link href="http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/"/>
     <id>http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/</id>
     <published>2016-01-08T04:08:54.000Z</published>
-    <updated>2016-01-08T04:21:55.052Z</updated>
+    <updated>2016-12-09T01:59:24.110Z</updated>
     <content type="html"><![CDATA[<p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
 <p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
 <p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
@@ -99,6 +138,8 @@
     <![CDATA[<p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span cl]]>
     </summary>
     
+      <category term="url参数" scheme="http://www.changeself.net/tags/url%E5%8F%82%E6%95%B0/"/>
+    
       <category term="微信开发" scheme="http://www.changeself.net/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/"/>
     
   </entry>
@@ -108,7 +149,7 @@
     <link href="http://www.changeself.net//articles/ionic-register-back-up/"/>
     <id>http://www.changeself.net//articles/ionic-register-back-up/</id>
     <published>2015-12-14T01:50:38.000Z</published>
-    <updated>2016-01-23T01:08:56.859Z</updated>
+    <updated>2016-12-09T03:27:45.230Z</updated>
     <content type="html"><![CDATA[<p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
 <p>都不能真正的注册到真机的物理返回键上，还是物理返回键生效</p>
 <p>通过阅读ionic的api doc 才发现registerBackButtonAction其实是有3个参数的，registerBackButtonAction(callback, priority, [actionId]);</p>

@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>$.when(array) | CharlesSong&#39;s Blog</title>
+  <title>ORA-12155 Error | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
+  <meta name="description" content="最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。
+后来想到TNS、Internal error代表的是网络间的异常，会不会是驱动jar包的问题呢。到官网下载了一个官方的ojdbc6.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="$.when(array)">
-<meta property="og:url" content="http://www.changeself.net/articles/jquery-when-array/index.html">
+<meta property="og:title" content="ORA-12155 Error">
+<meta property="og:url" content="http://www.changeself.net/articles/ORA-12155-Error/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
-<meta property="og:updated_time" content="2016-07-04T13:58:31.825Z">
+<meta property="og:description" content="最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。
+后来想到TNS、Internal error代表的是网络间的异常，会不会是驱动jar包的问题呢。到官网下载了一个官方的ojdbc6.">
+<meta property="og:updated_time" content="2016-12-09T03:27:12.137Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="$.when(array)">
-<meta name="twitter:description" content="1var promises = [&amp;#10;&amp;#9;ajaxs(1000).then(function(data)&amp;#123;console.log(data)&amp;#125;,function(data)&amp;#123;console.log(&amp;#39;reject:&amp;#39;+data)&amp;#125;), &amp;#10;&amp;#9;ajaxs(2000).then(function(data)&amp;#123;con">
+<meta name="twitter:title" content="ORA-12155 Error">
+<meta name="twitter:description" content="最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。
+后来想到TNS、Internal error代表的是网络间的异常，会不会是驱动jar包的问题呢。到官网下载了一个官方的ojdbc6.">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -203,11 +206,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-jquery-when-array" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ORA-12155-Error" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/articles/jquery-when-array/" class="article-date">
-  	<time datetime="2016-07-04T13:42:36.000Z" itemprop="datePublished">2016-07-04</time>
+      <a href="/articles/ORA-12155-Error/" class="article-date">
+  	<time datetime="2016-12-09T01:50:36.000Z" itemprop="datePublished">2016-12-09</time>
 </a>
     </div>
   
@@ -220,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      $.when(array)
+      ORA-12155 Error
     </h1>
   
 
@@ -229,7 +232,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/when/">when</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ORA-12155/">ORA-12155</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/异常-DevOps/">异常;DevOps</a></li></ul>
 	</div>
 
         
@@ -240,7 +243,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var promises = [&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(5000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(6000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;];&#10;&#10;&#10;$.when.apply($, promises).then(function(schemas) &#123;&#10;&#9;console.log(&#34;DONE&#34;, this, schemas);&#10;&#125;, function(e) &#123;&#10;&#9;console.log(&#39;FAIL&#39;);&#10;&#125;);&#10;&#10;&#10;&#10;var i=0;&#10;function ajaxs(timeout) &#123;&#10;&#9;var dtd = $.Deferred();&#10;&#9;setTimeout(function() &#123;&#10;&#9;&#9;if(i%2==0)&#123;&#10;&#9;&#9;&#9;dtd.resolve(timeout);&#10;&#9;&#9;&#125;else&#123;&#10;&#9;&#9;&#9;dtd.reject(timeout);&#10;&#9;&#9;&#125;&#10;&#9;&#9;i++;&#10;&#9;&#125;, timeout);&#10;&#9;return dtd.promise();&#10;&#125;</span><br></pre></td></tr></table></figure>
+        <p>最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，<br>百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。</p>
+<p>后来想到TNS、Internal error代表的是网络间的异常，会不会是驱动jar包的问题呢。到官网下载了一个官方的ojdbc6.jar（Oracle11g）替换了下驱动，经过测试，果然是驱动包的问题。</p>
+
       
     </div>
     
@@ -249,18 +254,9 @@
     
 <nav id="article-nav">
   
-    <a href="/articles/an-ajax-status0-error-caused-the-problem/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          an-ajax-status0-error-caused-the-problem
-        
-      </div>
-    </a>
   
-  
-    <a href="/articles/mybatis-set-globle-parameter/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mybatis设置全局变量</div>
+    <a href="/articles/an-ajax-status0-error-caused-the-problem/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">an-ajax-status0-error-caused-the-problem</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -289,7 +285,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="jquery-when-array" data-title="$.when(array)" data-url="http://www.changeself.net/articles/jquery-when-array/"></div>
+	<div class="ds-thread" data-thread-key="ORA-12155-Error" data-title="ORA-12155 Error" data-url="http://www.changeself.net/articles/ORA-12155-Error/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
