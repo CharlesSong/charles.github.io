@@ -2,53 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.changeself.net//articles/ionic-register-back-up/</loc>
-    <lastmod>2016-12-09T03:27:45.230Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.changeself.net//articles/mybatis-set-globle-parameter/</loc>
-    <lastmod>2016-12-09T03:27:30.720Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.changeself.net//articles/ORA-12155-Error/</loc>
-    <lastmod>2016-12-09T03:27:12.137Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.changeself.net//articles/an-ajax-status0-error-caused-the-problem/</loc>
-    <lastmod>2016-12-09T03:26:58.446Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/</loc>
-    <lastmod>2016-12-09T01:59:24.110Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.changeself.net//articles/webuploader-cros-java/</loc>
-    <lastmod>2016-12-09T01:57:04.264Z</lastmod>
+    
+    <lastmod>2017-01-06T06:12:07.198Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://www.changeself.net//articles/jquery-when-array/</loc>
-    <lastmod>2016-07-04T13:58:31.825Z</lastmod>
+    
+    <lastmod>2017-01-06T06:11:45.757Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://www.changeself.net//articles/domain-on-github/</loc>
-    <lastmod>2015-11-17T06:29:31.615Z</lastmod>
+    
+    <lastmod>2017-01-06T06:11:24.560Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.changeself.net//articles/an-ajax-status0-error-caused-the-problem/</loc>
+    
+    <lastmod>2017-01-06T06:11:13.516Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/</loc>
+    
+    <lastmod>2017-01-06T06:10:06.025Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.changeself.net//articles/part-time-summary/</loc>
+    
+    <lastmod>2017-01-06T01:35:42.938Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.changeself.net//articles/ionic-register-back-up/</loc>
+    
+    <lastmod>2016-12-09T03:27:45.230Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.changeself.net//articles/mybatis-set-globle-parameter/</loc>
+    
+    <lastmod>2016-12-09T03:27:30.720Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.changeself.net//articles/ORA-12155-Error/</loc>
+    
+    <lastmod>2016-12-09T03:27:12.137Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://www.changeself.net//articles/new-journey/</loc>
+    
     <lastmod>2015-11-17T01:48:22.938Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://www.changeself.net//articles/hello-world/</loc>
+    
     <lastmod>2015-11-16T12:02:16.902Z</lastmod>
+    
   </url>
   
 </urlset>

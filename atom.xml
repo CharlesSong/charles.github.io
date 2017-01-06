@@ -1,31 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[CharlesSong's Blog]]></title>
+  <title>CharlesSong&#39;s Blog</title>
   
   <link href="/atom.xml" rel="self"/>
+  
   <link href="http://www.changeself.net/"/>
-  <updated>2016-12-09T03:27:12.137Z</updated>
+  <updated>2017-01-06T01:35:42.938Z</updated>
   <id>http://www.changeself.net/</id>
   
   <author>
-    <name><![CDATA[Charles]]></name>
-    <email><![CDATA[Charles2Song@163.com]]></email>
+    <name>Charles</name>
+    <email>Charles2Song@163.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[ORA-12155 Error]]></title>
+    <title>兼职总结</title>
+    <link href="http://www.changeself.net//articles/part-time-summary/"/>
+    <id>http://www.changeself.net//articles/part-time-summary/</id>
+    <published>2017-01-06T00:50:28.000Z</published>
+    <updated>2017-01-06T01:35:42.938Z</updated>
+    
+    <content type="html"><![CDATA[<p>作为程序猿，肯定避免不了有熟悉的人来找帮忙做些东西，刚开始就只是单纯地帮忙，随着别人给些红包就慢慢的收费了，也有了自己的定价。俗话说，林子大了什么鸟都有，你就会遇到各种奇葩的人。本人虽然只是结了几个做前端页面的小活，也有了一些个人总结。</p>
+<h1 id="不要谈感情，伤钱、伤感情并伤时"><a href="#不要谈感情，伤钱、伤感情并伤时" class="headerlink" title="不要谈感情，伤钱、伤感情并伤时"></a>不要谈感情，伤钱、伤感情并伤时</h1><p>工作中不要谈感情，有些人就借用感情牌提出各种各样的要求，一陷入这个泥潭，想脱身就难，耗时耗力还不讨好。</p>
+<h1 id="不懂行且吝啬的人不要接"><a href="#不懂行且吝啬的人不要接" class="headerlink" title="不懂行且吝啬的人不要接"></a>不懂行且吝啬的人不要接</h1><p>有些人对要做的东西、大体啥流程等等啥都不懂，有时候你给他解释了半天一听价格又不做了</p>
+<h1 id="需求不明确的不接"><a href="#需求不明确的不接" class="headerlink" title="需求不明确的不接"></a>需求不明确的不接</h1><p>需求不明确，谁接谁知道。需求明确后，再次添加需求一定要再谈</p>
+<h1 id="接口文档乱七八糟的不接"><a href="#接口文档乱七八糟的不接" class="headerlink" title="接口文档乱七八糟的不接"></a>接口文档乱七八糟的不接</h1><p>接口文档乱七八糟，写的不知所云，没有统一的接口标准，每调用一个接口都得沟通大半天，特别是接口不自测的，你测试出来问题，还得等他调试bug</p>
+<h1 id="一定要首付"><a href="#一定要首付" class="headerlink" title="一定要首付"></a>一定要首付</h1><p>不要首付可能你的前期投入竹篮打水一场空</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为程序猿，肯定避免不了有熟悉的人来找帮忙做些东西，刚开始就只是单纯地帮忙，随着别人给些红包就慢慢的收费了，也有了自己的定价。俗话说，林子大了什么鸟都有，你就会遇到各种奇葩的人。本人虽然只是结了几个做前端页面的小活，也有了一些个人总结。&lt;/p&gt;
+&lt;h1 id=&quot;不要谈感情，
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ORA-12155 Error</title>
     <link href="http://www.changeself.net//articles/ORA-12155-Error/"/>
     <id>http://www.changeself.net//articles/ORA-12155-Error/</id>
     <published>2016-12-09T01:50:36.000Z</published>
     <updated>2016-12-09T03:27:12.137Z</updated>
+    
     <content type="html"><![CDATA[<p>最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，<br>百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。</p>
 <p>后来想到TNS、Internal error代表的是网络间的异常，会不会是驱动jar包的问题呢。到官网下载了一个官方的ojdbc6.jar（Oracle11g）替换了下驱动，经过测试，果然是驱动包的问题。</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，<br>百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。]]>
+    
+      &lt;p&gt;最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，&lt;br&gt;百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。
+    
     </summary>
+    
     
       <category term="ORA-12155" scheme="http://www.changeself.net/tags/ORA-12155/"/>
     
@@ -36,19 +67,24 @@
   </entry>
   
   <entry>
-    <title><![CDATA[an-ajax-status0-error-caused-the-problem]]></title>
+    <title>an-ajax-status0-error-caused-the-problem</title>
     <link href="http://www.changeself.net//articles/an-ajax-status0-error-caused-the-problem/"/>
     <id>http://www.changeself.net//articles/an-ajax-status0-error-caused-the-problem/</id>
     <published>2016-10-18T02:10:08.000Z</published>
-    <updated>2016-12-09T03:26:58.446Z</updated>
+    <updated>2017-01-06T06:11:13.516Z</updated>
+    
     <content type="html"><![CDATA[<p>Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。</p>
-<p>服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。</p>
+<p>服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。</p>
-<p>服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常。</p>
-]]>
+    
+      &lt;p&gt;Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。&lt;/p&gt;
+&lt;p&gt;服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常&lt;/p&gt;
+
+    
     </summary>
+    
     
       <category term="DevOps" scheme="http://www.changeself.net/tags/DevOps/"/>
     
@@ -59,15 +95,21 @@
   </entry>
   
   <entry>
-    <title><![CDATA[$.when(array)]]></title>
+    <title>$.when(array)</title>
     <link href="http://www.changeself.net//articles/jquery-when-array/"/>
     <id>http://www.changeself.net//articles/jquery-when-array/</id>
     <published>2016-07-04T13:42:36.000Z</published>
-    <updated>2016-07-04T13:58:31.825Z</updated>
-    <content type="html"><![CDATA[<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var promises = [&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;), &#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(5000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(6000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;];&#10;&#10;&#10;$.when.apply($, promises).then(function(schemas) &#123;&#10;&#9;console.log(&#34;DONE&#34;, this, schemas);&#10;&#125;, function(e) &#123;&#10;&#9;console.log(&#39;FAIL&#39;);&#10;&#125;);&#10;&#10;&#10;&#10;var i=0;&#10;function ajaxs(timeout) &#123;&#10;&#9;var dtd = $.Deferred();&#10;&#9;setTimeout(function() &#123;&#10;&#9;&#9;if(i%2==0)&#123;&#10;&#9;&#9;&#9;dtd.resolve(timeout);&#10;&#9;&#9;&#125;else&#123;&#10;&#9;&#9;&#9;dtd.reject(timeout);&#10;&#9;&#9;&#125;&#10;&#9;&#9;i++;&#10;&#9;&#125;, timeout);&#10;&#9;return dtd.promise();&#10;&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <updated>2017-01-06T06:11:45.757Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var promises = [&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(5000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(6000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;];&#10;&#10;&#10;$.when.apply($, promises).then(function(schemas) &#123;&#10;&#9;console.log(&#34;DONE&#34;, this, schemas);&#10;&#125;, function(e) &#123;&#10;&#9;console.log(&#39;FAIL&#39;);&#10;&#125;);&#10;&#10;&#10;&#10;var i=0;&#10;function ajaxs(timeout) &#123;&#10;&#9;var dtd = $.Deferred();&#10;&#9;setTimeout(function() &#123;&#10;&#9;&#9;if(i%2==0)&#123;&#10;&#9;&#9;&#9;dtd.resolve(timeout);&#10;&#9;&#9;&#125;else&#123;&#10;&#9;&#9;&#9;dtd.reject(timeout);&#10;&#9;&#9;&#125;&#10;&#9;&#9;i++;&#10;&#9;&#125;, timeout);&#10;&#9;return dtd.promise();&#10;&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
     <summary type="html">
-    <![CDATA[<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="li]]>
+    
+      &lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;li
+    
     </summary>
+    
     
       <category term="array" scheme="http://www.changeself.net/tags/array/"/>
     
@@ -78,17 +120,22 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Mybatis设置全局变量]]></title>
+    <title>Mybatis设置全局变量</title>
     <link href="http://www.changeself.net//articles/mybatis-set-globle-parameter/"/>
     <id>http://www.changeself.net//articles/mybatis-set-globle-parameter/</id>
     <published>2016-04-05T07:29:02.000Z</published>
     <updated>2016-12-09T03:27:30.720Z</updated>
+    
     <content type="html"><![CDATA[<p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="property">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="type">class</span>=<span class="string">"org.mybatis.spring.SqlSessionFactoryBean"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"dataSource"</span> <span class="keyword">ref</span>=<span class="string">"dataSource"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configLocation"</span> value=<span class="string">"classpath:mybatis/mybatis-config.xml"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configurationProperties"</span>&gt;</span><br><span class="line">        &lt;props&gt;</span><br><span class="line">            &lt;<span class="keyword">prop</span> key=<span class="string">"dbType"</span>&gt;oracle&lt;/<span class="keyword">prop</span>&gt;</span><br><span class="line">        &lt;/props&gt;</span><br><span class="line">    &lt;/<span class="keyword">property</span>&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
 <p>java中获取此参数可以通过：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlSessionFactory.getConfiguration().getVariables().getProperty(<span class="string">"dbType"</span>)</span><br></pre></td></tr></table></figure></p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applesc]]>
+    
+      &lt;p&gt;mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;&lt;br&gt;可通过configurationProperties参数设置，设置方法如下：&lt;br&gt;&lt;figure class=&quot;highlight applesc
+    
     </summary>
+    
     
       <category term="globle parameter" scheme="http://www.changeself.net/tags/globle-parameter/"/>
     
@@ -99,20 +146,25 @@
   </entry>
   
   <entry>
-    <title><![CDATA[java实现webuploader跨域上传]]></title>
+    <title>java实现webuploader跨域上传</title>
     <link href="http://www.changeself.net//articles/webuploader-cros-java/"/>
     <id>http://www.changeself.net//articles/webuploader-cros-java/</id>
     <published>2016-03-15T06:00:22.000Z</published>
-    <updated>2016-12-09T01:57:04.264Z</updated>
+    <updated>2017-01-06T06:12:07.198Z</updated>
+    
     <content type="html"><![CDATA[<p>项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。</p>
 <p>webuploader进行上传，会执行2个请求；一个option请求，一个post（根据你的webuploader的配置method 值决定），需要在option请求中对响应头进行处理，post响应头也进行响应的处理。</p>
 <p>以servlet为例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@WebServlet</span>(description = <span class="string">"文件上传"</span>,value = &#123;<span class="string">"/file/upload"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUpload</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FileUpload</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="comment">//文件上传逻辑</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doOptions</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Credentials"</span>, <span class="string">"false"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="keyword">super</span>.doOptions(req, resp);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p>再次测试跨域上传，正常</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。</p>
-<p>webuploader进行]]>
+    
+      &lt;p&gt;项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。&lt;/p&gt;
+&lt;p&gt;webuploader进行
+    
     </summary>
+    
     
       <category term="java" scheme="http://www.changeself.net/tags/java/"/>
     
@@ -123,20 +175,25 @@
   </entry>
   
   <entry>
-    <title><![CDATA[微信开发网页授权时URL参数问题]]></title>
+    <title>微信开发网页授权时URL参数问题</title>
     <link href="http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/"/>
     <id>http://www.changeself.net//articles/weixin-base-userinfo-url-parameters/</id>
     <published>2016-01-08T04:08:54.000Z</published>
-    <updated>2016-12-09T01:59:24.110Z</updated>
+    <updated>2017-01-06T06:10:06.025Z</updated>
+    
     <content type="html"><![CDATA[<p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
 <p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
 <p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
 <p>注意，参数必须进行编码才可行</p>
 <p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span cl]]>
+    
+      &lt;p&gt;微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cl
+    
     </summary>
+    
     
       <category term="url参数" scheme="http://www.changeself.net/tags/url%E5%8F%82%E6%95%B0/"/>
     
@@ -145,84 +202,105 @@
   </entry>
   
   <entry>
-    <title><![CDATA[ionic 注册返回事件]]></title>
+    <title>ionic 注册返回事件</title>
     <link href="http://www.changeself.net//articles/ionic-register-back-up/"/>
     <id>http://www.changeself.net//articles/ionic-register-back-up/</id>
     <published>2015-12-14T01:50:38.000Z</published>
     <updated>2016-12-09T03:27:45.230Z</updated>
+    
     <content type="html"><![CDATA[<p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
 <p>都不能真正的注册到真机的物理返回键上，还是物理返回键生效</p>
 <p>通过阅读ionic的api doc 才发现registerBackButtonAction其实是有3个参数的，registerBackButtonAction(callback, priority, [actionId]);</p>
 <p>priority(必须)：优先级，数值越大先执行，并且有一些特别的级别<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span>——返回上一个视图</span><br><span class="line"><span class="number">150</span>——关闭侧边按钮</span><br><span class="line"><span class="number">300</span>——关闭action sheet</span><br><span class="line"><span class="number">200</span>——取消模态框</span><br><span class="line"><span class="number">400</span>——取消popup</span><br><span class="line"><span class="number">500</span>——取消loading overlay</span><br></pre></td></tr></table></figure></p>
 <p>对了，监听物理返回键别忘了引入Cordova.js哦</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter">]]>
+    
+      &lt;p&gt;使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
+    
     </summary>
+    
     
       <category term="ionic" scheme="http://www.changeself.net/tags/ionic/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[github绑定域名]]></title>
+    <title>github绑定域名</title>
     <link href="http://www.changeself.net//articles/domain-on-github/"/>
     <id>http://www.changeself.net//articles/domain-on-github/</id>
     <published>2015-11-17T04:17:50.000Z</published>
-    <updated>2015-11-17T06:29:31.615Z</updated>
+    <updated>2017-01-06T06:11:24.560Z</updated>
+    
     <content type="html"><![CDATA[<p>百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下</p>
 <p>CNAME内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.com</span><br></pre></td></tr></table></figure></p>
 <p>DNS设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@      A      username.github.io</span><br><span class="line">www    CNAME  username.github.io</span><br></pre></td></tr></table></figure></p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下</p>
-<p>CNAME内容<br><figure class="highlight bash"><table><tr><td class]]>
+    
+      &lt;p&gt;百度了github pages 指定域名的很多方法，但是都不管用，后来仔细阅读官方文档才发现原来需要一个CNAME文件放在项目根目录下&lt;/p&gt;
+&lt;p&gt;CNAME内容&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class
+    
     </summary>
     
-      <category term="域名绑定、github" scheme="http://www.changeself.net/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E3%80%81github/"/>
+    
+      <category term="github" scheme="http://www.changeself.net/tags/github/"/>
+    
+      <category term="域名绑定" scheme="http://www.changeself.net/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[新的征程、新的开始]]></title>
+    <title>新的征程、新的开始</title>
     <link href="http://www.changeself.net//articles/new-journey/"/>
     <id>http://www.changeself.net//articles/new-journey/</id>
     <published>2015-11-16T09:58:49.000Z</published>
     <updated>2015-11-17T01:48:22.938Z</updated>
+    
     <content type="html"><![CDATA[<p>博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！</p>
 <p>新的博客由<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> 生成静态文件，采用<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a>主题放置在Github上,在此特别感谢Github、Hexo与黎小腾君！</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！</p>
-<p>新的博客由<a href="http://hexo.io/" target="_blank" rel="external]]>
+    
+      &lt;p&gt;博客原本部署在新浪SAE上，但是因为SAE不再赠送云豆，因此转移到Github Pages 上。原来的文章不再迁移，由此开始一个新的征程！&lt;/p&gt;
+&lt;p&gt;新的博客由&lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external
+    
     </summary>
+    
     
       <category term="随笔" scheme="http://www.changeself.net/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
+    <title>Hello World</title>
     <link href="http://www.changeself.net//articles/hello-world/"/>
     <id>http://www.changeself.net//articles/hello-world/</id>
     <published>2015-11-16T04:58:49.000Z</published>
     <updated>2015-11-16T12:02:16.902Z</updated>
+    
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html">Writing</a><br>]]>
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;http://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;br&gt;
     
     </summary>
+    
     
   </entry>
   
