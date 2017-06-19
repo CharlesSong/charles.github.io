@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.changeself.net/"/>
-  <updated>2017-01-07T04:54:14.667Z</updated>
+  <updated>2017-06-19T05:30:37.390Z</updated>
   <id>http://www.changeself.net/</id>
   
   <author>
@@ -16,11 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>rocketmq “no route info of this topic”异常解决</title>
+    <link href="http://www.changeself.net//articles/rocketmq-no-route-info-of-this-topic/"/>
+    <id>http://www.changeself.net//articles/rocketmq-no-route-info-of-this-topic/</id>
+    <published>2017-06-19T05:16:51.000Z</published>
+    <updated>2017-06-19T05:30:37.390Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、问题重现"><a href="#一、问题重现" class="headerlink" title="一、问题重现"></a>一、问题重现</h1><p>rocketmq按照官方Quick Start <a href="https://rocketmq.incubator.apache.org/docs/quick-start/" target="_blank" rel="external">https://rocketmq.incubator.apache.org/docs/quick-start/</a>:</p>
+<ol>
+<li>Start Name Server</li>
+<li>Start Broker</li>
+<li>Send &amp; Receive Message</li>
+</ol>
+<p>执行到第三步事，异常：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">com<span class="class">.alibaba</span><span class="class">.rocketmq</span><span class="class">.client</span><span class="class">.exception</span><span class="class">.MQClientException</span>: No route info of this topic, TopicTest1</span><br><span class="line">See http:<span class="comment">//docs.aliyun.com/cn#/pub/ons/faq/exceptions&amp;topic_not_exist for further details.</span></span><br><span class="line">    at</span><br></pre></td></tr></table></figure></p>
+<h1 id="二、问题查找"><a href="#二、问题查找" class="headerlink" title="二、问题查找"></a>二、问题查找</h1><p>经过查找资料，大部分是在启动broker的时候添加autoCreateTopicEnable=true 参数，经过实际测试，该参数并不能解决问题</p>
+<h1 id="三、问题解决"><a href="#三、问题解决" class="headerlink" title="三、问题解决"></a>三、问题解决</h1><p><a href="https://github.com/alibaba/RocketMQ/issues/44" target="_blank" rel="external">https://github.com/alibaba/RocketMQ/issues/44</a> ISSUES中已经有很多人遇到过此问题。实际的问题原因是系统防火墙。关闭防火墙或者添加9876、10911端口开放规则即可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、问题重现&quot;&gt;&lt;a href=&quot;#一、问题重现&quot; class=&quot;headerlink&quot; title=&quot;一、问题重现&quot;&gt;&lt;/a&gt;一、问题重现&lt;/h1&gt;&lt;p&gt;rocketmq按照官方Quick Start &lt;a href=&quot;https://rocketmq.incu
+    
+    </summary>
+    
+    
+      <category term="rocketmq" scheme="http://www.changeself.net/tags/rocketmq/"/>
+    
+  </entry>
+  
+  <entry>
     <title>兼职之血泪经验</title>
     <link href="http://www.changeself.net//articles/part-time-summary/"/>
     <id>http://www.changeself.net//articles/part-time-summary/</id>
     <published>2017-01-06T00:50:28.000Z</published>
-    <updated>2017-01-07T04:54:14.667Z</updated>
+    <updated>2017-01-07T09:25:49.928Z</updated>
     
     <content type="html"><![CDATA[<p>作为程序猿，肯定避免不了有熟悉的人来找帮忙做些东西，刚开始就只是单纯地帮忙，随着别人给些红包就慢慢的收费了，也有了自己的定价。俗话说，林子大了什么鸟都有，你就会遇到各种奇葩的人。本人虽然只是结了几个做前端页面的小活，也有了一些个人总结。</p>
 <h1 id="不要谈感情，伤钱、伤感情并伤时"><a href="#不要谈感情，伤钱、伤感情并伤时" class="headerlink" title="不要谈感情，伤钱、伤感情并伤时"></a>不要谈感情，伤钱、伤感情并伤时</h1><p>工作中不要谈感情，有些人就借用感情牌提出各种各样的要求，一陷入这个泥潭，想脱身就难，耗时耗力还不讨好。</p>

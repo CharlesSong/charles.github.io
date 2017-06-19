@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/11 | CharlesSong&#39;s Blog</title>
+  <title>rocketmq “no route info of this topic”异常解决 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="混生活的程序猿，巫术修炼中...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CharlesSong's Blog">
-<meta property="og:url" content="http://www.changeself.net/archives/2015/11/index.html">
+  <meta name="description" content="一、问题重现rocketmq按照官方Quick Start https://rocketmq.incubator.apache.org/docs/quick-start/:
+
+Start Name Server
+Start Broker
+Send &amp;amp; Receive Message
+
+执行到第三步事，异常：123com.alibaba.rocketmq.client.exception.M">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rocketmq “no route info of this topic”异常解决">
+<meta property="og:url" content="http://www.changeself.net/articles/rocketmq-no-route-info-of-this-topic/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="混生活的程序猿，巫术修炼中...">
+<meta property="og:description" content="一、问题重现rocketmq按照官方Quick Start https://rocketmq.incubator.apache.org/docs/quick-start/:
+
+Start Name Server
+Start Broker
+Send &amp;amp; Receive Message
+
+执行到第三步事，异常：123com.alibaba.rocketmq.client.exception.M">
+<meta property="og:updated_time" content="2017-06-19T05:30:37.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CharlesSong's Blog">
-<meta name="twitter:description" content="混生活的程序猿，巫术修炼中...">
+<meta name="twitter:title" content="rocketmq “no route info of this topic”异常解决">
+<meta name="twitter:description" content="一、问题重现rocketmq按照官方Quick Start https://rocketmq.incubator.apache.org/docs/quick-start/:
+
+Start Name Server
+Start Broker
+Send &amp;amp; Receive Message
+
+执行到第三步事，异常：123com.alibaba.rocketmq.client.exception.M">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -202,111 +221,111 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-rocketmq-no-route-info-of-this-topic" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/articles/domain-on-github/" class="archive-article-date">
-  	<time datetime="2015-11-17T04:17:50.000Z" itemprop="datePublished">11月 17</time>
+    <div class="article-meta">
+      <a href="/articles/rocketmq-no-route-info-of-this-topic/" class="article-date">
+  	<time datetime="2017-06-19T05:16:51.000Z" itemprop="datePublished">2017-06-19</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/articles/domain-on-github/">github绑定域名</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      rocketmq “no route info of this topic”异常解决
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/域名绑定/">域名绑定</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rocketmq/">rocketmq</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/articles/new-journey/" class="archive-article-date">
-  	<time datetime="2015-11-16T09:58:49.000Z" itemprop="datePublished">11月 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/articles/new-journey/">新的征程、新的开始</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、问题重现"><a href="#一、问题重现" class="headerlink" title="一、问题重现"></a>一、问题重现</h1><p>rocketmq按照官方Quick Start <a href="https://rocketmq.incubator.apache.org/docs/quick-start/" target="_blank" rel="external">https://rocketmq.incubator.apache.org/docs/quick-start/</a>:</p>
+<ol>
+<li>Start Name Server</li>
+<li>Start Broker</li>
+<li>Send &amp; Receive Message</li>
+</ol>
+<p>执行到第三步事，异常：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">com<span class="class">.alibaba</span><span class="class">.rocketmq</span><span class="class">.client</span><span class="class">.exception</span><span class="class">.MQClientException</span>: No route info of this topic, TopicTest1</span><br><span class="line">See http:<span class="comment">//docs.aliyun.com/cn#/pub/ons/faq/exceptions&amp;topic_not_exist for further details.</span></span><br><span class="line">    at</span><br></pre></td></tr></table></figure></p>
+<h1 id="二、问题查找"><a href="#二、问题查找" class="headerlink" title="二、问题查找"></a>二、问题查找</h1><p>经过查找资料，大部分是在启动broker的时候添加autoCreateTopicEnable=true 参数，经过实际测试，该参数并不能解决问题</p>
+<h1 id="三、问题解决"><a href="#三、问题解决" class="headerlink" title="三、问题解决"></a>三、问题解决</h1><p><a href="https://github.com/alibaba/RocketMQ/issues/44" target="_blank" rel="external">https://github.com/alibaba/RocketMQ/issues/44</a> ISSUES中已经有很多人遇到过此问题。实际的问题原因是系统防火墙。关闭防火墙或者添加9876、10911端口开放规则即可。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/articles/part-time-summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">兼职之血泪经验</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/articles/hello-world/" class="archive-article-date">
-  	<time datetime="2015-11-16T04:58:49.000Z" itemprop="datePublished">11月 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/articles/hello-world/">Hello World</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="rocketmq-no-route-info-of-this-topic" data-title="rocketmq “no route info of this topic”异常解决" data-url="http://www.changeself.net/articles/rocketmq-no-route-info-of-this-topic/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
 
 </div>
       <footer id="footer">
@@ -338,8 +357,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
