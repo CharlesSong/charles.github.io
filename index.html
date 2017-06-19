@@ -236,7 +236,7 @@
 <li>Start Broker</li>
 <li>Send &amp; Receive Message</li>
 </ol>
-<p>执行到第三步事，异常：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">com<span class="class">.alibaba</span><span class="class">.rocketmq</span><span class="class">.client</span><span class="class">.exception</span><span class="class">.MQClientException</span>: No route info of this topic, TopicTest1</span><br><span class="line">See http:<span class="comment">//docs.aliyun.com/cn#/pub/ons/faq/exceptions&amp;topic_not_exist for further details.</span></span><br><span class="line">    at</span><br></pre></td></tr></table></figure></p>
+<p>执行到第三步事，异常：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">com<span class="class">.alibaba</span><span class="class">.rocketmq</span><span class="class">.client</span><span class="class">.exception</span><span class="class">.MQClientException</span>: No route info of this topic, TopicTestA</span><br><span class="line">    at</span><br></pre></td></tr></table></figure></p>
 <h1 id="二、问题查找"><a href="#二、问题查找" class="headerlink" title="二、问题查找"></a>二、问题查找</h1><p>经过查找资料，大部分是在启动broker的时候添加autoCreateTopicEnable=true 参数，经过实际测试，该参数并不能解决问题</p>
 <h1 id="三、问题解决"><a href="#三、问题解决" class="headerlink" title="三、问题解决"></a>三、问题解决</h1><p><a href="https://github.com/alibaba/RocketMQ/issues/44" target="_blank" rel="external">https://github.com/alibaba/RocketMQ/issues/44</a> ISSUES中已经有很多人遇到过此问题。实际的问题原因是系统防火墙。关闭防火墙或者添加9876、10911端口开放规则即可。</p>
 
