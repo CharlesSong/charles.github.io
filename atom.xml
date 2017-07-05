@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.changeself.net/"/>
-  <updated>2017-07-05T07:35:25.173Z</updated>
+  <updated>2017-07-05T08:00:26.897Z</updated>
   <id>http://www.changeself.net/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://www.changeself.net//articles/creating-own-spring-initializr-instance/"/>
     <id>http://www.changeself.net//articles/creating-own-spring-initializr-instance/</id>
     <published>2017-07-05T07:30:49.000Z</published>
-    <updated>2017-07-05T07:35:25.173Z</updated>
+    <updated>2017-07-05T08:00:26.897Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Ⅰ-前言"><a href="#Ⅰ-前言" class="headerlink" title="Ⅰ.前言"></a>Ⅰ.前言</h1><p>使用IDE等工具通过 <a href="https://start.spring.io/" target="_blank" rel="external">https://start.spring.io/</a>  创建项目非常方便，但是限于网络原因，有时候无法访问。Spring Initializr提供了搭建个人Initialzr项目的支持，通过参考 <a href="http://blog.csdn.net/chszs/article/details/51713174" target="_blank" rel="external">http://blog.csdn.net/chszs/article/details/51713174</a>  有很多细节没有描述清楚。</p>
-<h1 id="Ⅱ-开始搭建"><a href="#Ⅱ-开始搭建" class="headerlink" title="Ⅱ.开始搭建"></a>Ⅱ.开始搭建</h1><h2 id="1-通过-https-start-spring-io-创建一个Maven-web项目"><a href="#1-通过-https-start-spring-io-创建一个Maven-web项目" class="headerlink" title="1. 通过 https://start.spring.io/ 创建一个Maven  web项目"></a>1. 通过 <a href="https://start.spring.io/" target="_blank" rel="external">https://start.spring.io/</a> 创建一个Maven  web项目</h2><p><img src="https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8cb0c021-2eec-4f17-9fa5-96fd8b8a5801.png" alt="image"></p>
+<h1 id="Ⅱ-开始搭建"><a href="#Ⅱ-开始搭建" class="headerlink" title="Ⅱ.开始搭建"></a>Ⅱ.开始搭建</h1><h2 id="1-通过-https-start-spring-io-创建一个Maven-web项目"><a href="#1-通过-https-start-spring-io-创建一个Maven-web项目" class="headerlink" title="1. 通过 https://start.spring.io/ 创建一个Maven  web项目"></a>1. 通过 <a href="https://start.spring.io/" target="_blank" rel="external">https://start.spring.io/</a> 创建一个Maven  web项目</h2><p><img src="https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8cb0c021-2eec-4f17-9fa5-96fd8b8a5801.png" alt="image"><br><a id="more"></a></p>
 <h2 id="2-添加依赖"><a href="#2-添加依赖" class="headerlink" title="2. 添加依赖"></a>2. 添加依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">      <span class="tag">&lt;<span class="title">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">groupId</span>&gt;</span>io.spring.initializr<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>initializr-web<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="3-启动运行"><a href="#3-启动运行" class="headerlink" title="3. 启动运行"></a>3. 启动运行</h2><p>运行报错，无法引入依赖。仔细查找文档，<a href="https://github.com/spring-io/initializr" target="_blank" rel="external">https://github.com/spring-io/initializr</a> README中有说明：<br><img src="https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8eed3bc3-8c3c-4764-a871-01db1ca4ed86.png" alt="image"></p>
 <blockquote>
@@ -44,7 +44,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Ⅰ-前言&quot;&gt;&lt;a href=&quot;#Ⅰ-前言&quot; class=&quot;headerlink&quot; title=&quot;Ⅰ.前言&quot;&gt;&lt;/a&gt;Ⅰ.前言&lt;/h1&gt;&lt;p&gt;使用IDE等工具通过 &lt;a href=&quot;https://start.spring.io/&quot; target=&quot;_blank&quot; 
+      &lt;h1 id=&quot;Ⅰ-前言&quot;&gt;&lt;a href=&quot;#Ⅰ-前言&quot; class=&quot;headerlink&quot; title=&quot;Ⅰ.前言&quot;&gt;&lt;/a&gt;Ⅰ.前言&lt;/h1&gt;&lt;p&gt;使用IDE等工具通过 &lt;a href=&quot;https://start.spring.io/&quot;&gt;https://start.spring.io/&lt;/a&gt;  创建项目非常方便，但是限于网络原因，有时候无法访问。Spring Initializr提供了搭建个人Initialzr项目的支持，通过参考 &lt;a href=&quot;http://blog.csdn.net/chszs/article/details/51713174&quot;&gt;http://blog.csdn.net/chszs/article/details/51713174&lt;/a&gt;  有很多细节没有描述清楚。&lt;/p&gt;
+&lt;h1 id=&quot;Ⅱ-开始搭建&quot;&gt;&lt;a href=&quot;#Ⅱ-开始搭建&quot; class=&quot;headerlink&quot; title=&quot;Ⅱ.开始搭建&quot;&gt;&lt;/a&gt;Ⅱ.开始搭建&lt;/h1&gt;&lt;h2 id=&quot;1-通过-https-start-spring-io-创建一个Maven-web项目&quot;&gt;&lt;a href=&quot;#1-通过-https-start-spring-io-创建一个Maven-web项目&quot; class=&quot;headerlink&quot; title=&quot;1. 通过 https://start.spring.io/ 创建一个Maven  web项目&quot;&gt;&lt;/a&gt;1. 通过 &lt;a href=&quot;https://start.spring.io/&quot;&gt;https://start.spring.io/&lt;/a&gt; 创建一个Maven  web项目&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8cb0c021-2eec-4f17-9fa5-96fd8b8a5801.png&quot; alt=&quot;image&quot;&gt;&lt;br&gt;
     
     </summary>
     
