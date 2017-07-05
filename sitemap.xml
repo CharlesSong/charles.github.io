@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.changeself.net//articles/creating-own-spring-initializr-instance/</loc>
+    
+    <lastmod>2017-07-05T07:35:25.173Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.changeself.net//articles/rocketmq-no-route-info-of-this-topic/</loc>
     
     <lastmod>2017-06-19T05:32:22.591Z</lastmod>

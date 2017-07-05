@@ -3,17 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CharlesSong&#39;s Blog</title>
+  <title>Spring Boot方式搭建自己的Spring Initializr 服务器。 | CharlesSong&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="混生活的程序猿，巫术修炼中...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CharlesSong's Blog">
-<meta property="og:url" content="http://www.changeself.net/index.html">
+  <meta name="description" content="Ⅰ.前言使用IDE等工具通过 https://start.spring.io/  创建项目非常方便，但是限于网络原因，有时候无法访问。Spring Initializr提供了搭建个人Initialzr项目的支持，通过参考 http://blog.csdn.net/chszs/article/details/51713174  有很多细节没有描述清楚。
+Ⅱ.开始搭建1. 通过 https://sta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot方式搭建自己的Spring Initializr 服务器。">
+<meta property="og:url" content="http://www.changeself.net/articles/creating-own-spring-initializr-instance/index.html">
 <meta property="og:site_name" content="CharlesSong's Blog">
-<meta property="og:description" content="混生活的程序猿，巫术修炼中...">
+<meta property="og:description" content="Ⅰ.前言使用IDE等工具通过 https://start.spring.io/  创建项目非常方便，但是限于网络原因，有时候无法访问。Spring Initializr提供了搭建个人Initialzr项目的支持，通过参考 http://blog.csdn.net/chszs/article/details/51713174  有很多细节没有描述清楚。
+Ⅱ.开始搭建1. 通过 https://sta">
+<meta property="og:image" content="https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8cb0c021-2eec-4f17-9fa5-96fd8b8a5801.png">
+<meta property="og:image" content="https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8eed3bc3-8c3c-4764-a871-01db1ca4ed86.png">
+<meta property="og:image" content="https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/2084eab3-2936-42c6-8e9b-b848045b35be.png">
+<meta property="og:image" content="https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/67761668-f3eb-44d8-92ff-8dcaec6e5a03.png">
+<meta property="og:updated_time" content="2017-07-05T07:35:25.173Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CharlesSong's Blog">
-<meta name="twitter:description" content="混生活的程序猿，巫术修炼中...">
+<meta name="twitter:title" content="Spring Boot方式搭建自己的Spring Initializr 服务器。">
+<meta name="twitter:description" content="Ⅰ.前言使用IDE等工具通过 https://start.spring.io/  创建项目非常方便，但是限于网络原因，有时候无法访问。Spring Initializr提供了搭建个人Initialzr项目的支持，通过参考 http://blog.csdn.net/chszs/article/details/51713174  有很多细节没有描述清楚。
+Ⅱ.开始搭建1. 通过 https://sta">
   
     <link rel="alternative" href="/atom.xml" title="CharlesSong&#39;s Blog" type="application/atom+xml">
   
@@ -202,9 +210,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-creating-own-spring-initializr-instance" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-creating-own-spring-initializr-instance" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/articles/creating-own-spring-initializr-instance/" class="article-date">
@@ -220,12 +226,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/creating-own-spring-initializr-instance/">Spring Boot方式搭建自己的Spring Initializr 服务器。</a>
+    <h1 class="article-title" itemprop="name">
+      Spring Boot方式搭建自己的Spring Initializr 服务器。
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-initializr/">spring initializr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建/">搭建</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -252,554 +269,62 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-boot/">spring boot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-initializr/">spring initializr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建/">搭建</a></li></ul>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/articles/rocketmq-no-route-info-of-this-topic/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">rocketmq “no route info of this topic”异常解决</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-      
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="creating-own-spring-initializr-instance" data-title="Spring Boot方式搭建自己的Spring Initializr 服务器。" data-url="http://www.changeself.net/articles/creating-own-spring-initializr-instance/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-  
-    <article id="post-rocketmq-no-route-info-of-this-topic" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/rocketmq-no-route-info-of-this-topic/" class="article-date">
-  	<time datetime="2017-06-19T05:16:51.000Z" itemprop="datePublished">2017-06-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/rocketmq-no-route-info-of-this-topic/">rocketmq “no route info of this topic”异常解决</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、问题重现"><a href="#一、问题重现" class="headerlink" title="一、问题重现"></a>一、问题重现</h1><p>rocketmq按照官方Quick Start <a href="https://rocketmq.incubator.apache.org/docs/quick-start/" target="_blank" rel="external">https://rocketmq.incubator.apache.org/docs/quick-start/</a>:</p>
-<ol>
-<li>Start Name Server</li>
-<li>Start Broker</li>
-<li>Send &amp; Receive Message</li>
-</ol>
-<p>执行到第三步事，异常：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">com<span class="class">.alibaba</span><span class="class">.rocketmq</span><span class="class">.client</span><span class="class">.exception</span><span class="class">.MQClientException</span>: No route info of this topic, TopicTestA</span><br><span class="line">    at</span><br></pre></td></tr></table></figure></p>
-<h1 id="二、问题查找"><a href="#二、问题查找" class="headerlink" title="二、问题查找"></a>二、问题查找</h1><p>经过查找资料，大部分是在启动broker的时候添加autoCreateTopicEnable=true 参数，经过实际测试，该参数并不能解决问题</p>
-<h1 id="三、问题解决"><a href="#三、问题解决" class="headerlink" title="三、问题解决"></a>三、问题解决</h1><p><a href="https://github.com/alibaba/RocketMQ/issues/44" target="_blank" rel="external">https://github.com/alibaba/RocketMQ/issues/44</a> ISSUES中已经有很多人遇到过此问题。实际的问题原因是系统防火墙。关闭防火墙或者添加9876、10911端口开放规则即可。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rocketmq/">rocketmq</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-part-time-summary" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/part-time-summary/" class="article-date">
-  	<time datetime="2017-01-06T00:50:28.000Z" itemprop="datePublished">2017-01-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/part-time-summary/">兼职之血泪经验</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作为程序猿，肯定避免不了有熟悉的人来找帮忙做些东西，刚开始就只是单纯地帮忙，随着别人给些红包就慢慢的收费了，也有了自己的定价。俗话说，林子大了什么鸟都有，你就会遇到各种奇葩的人。本人虽然只是结了几个做前端页面的小活，也有了一些个人总结。</p>
-<h1 id="不要谈感情，伤钱、伤感情并伤时"><a href="#不要谈感情，伤钱、伤感情并伤时" class="headerlink" title="不要谈感情，伤钱、伤感情并伤时"></a>不要谈感情，伤钱、伤感情并伤时</h1><p>工作中不要谈感情，有些人就借用感情牌提出各种各样的要求，一陷入这个泥潭，想脱身就难，耗时耗力还不讨好。</p>
-<h1 id="不懂行且吝啬的人不要接"><a href="#不懂行且吝啬的人不要接" class="headerlink" title="不懂行且吝啬的人不要接"></a>不懂行且吝啬的人不要接</h1><p>有些人对要做的东西、大体啥流程等等啥都不懂，有时候你给他解释了半天一听价格又不做了</p>
-<h1 id="需求不明确的不接"><a href="#需求不明确的不接" class="headerlink" title="需求不明确的不接"></a>需求不明确的不接</h1><p>需求不明确，谁接谁知道。需求明确后，再次添加需求一定要再谈</p>
-<h1 id="接口文档乱七八糟的不接"><a href="#接口文档乱七八糟的不接" class="headerlink" title="接口文档乱七八糟的不接"></a>接口文档乱七八糟的不接</h1><p>接口文档乱七八糟，写的不知所云，没有统一的接口标准，每调用一个接口都得沟通大半天，特别是接口不自测的，你测试出来问题，还得等他调试bug</p>
-<h1 id="一定要首付"><a href="#一定要首付" class="headerlink" title="一定要首付"></a>一定要首付</h1><p>不要首付可能你的前期投入竹篮打水一场空</p>
-<h1 id="上来就给你画大饼说还有其他活甚至是让你技术入股的，请一笑而过，千万别当真。"><a href="#上来就给你画大饼说还有其他活甚至是让你技术入股的，请一笑而过，千万别当真。" class="headerlink" title="上来就给你画大饼说还有其他活甚至是让你技术入股的，请一笑而过，千万别当真。"></a>上来就给你画大饼说还有其他活甚至是让你技术入股的，请一笑而过，千万别当真。</h1><p>这就是手段，让你好好干活而已。非常挺讨厌这种人。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ORA-12155-Error" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/ORA-12155-Error/" class="article-date">
-  	<time datetime="2016-12-09T01:50:36.000Z" itemprop="datePublished">2016-12-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/ORA-12155-Error/">ORA-12155 Error</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近查看生产机日志，返现数据库链接老是报【 ORA-12155: TNS: 在 NSWMARKER 包中收到错误的数据类型】异常，<br>百度、Google后发现问题原因是Internal error during break handling.但是没有找到合适的解决办法。</p>
-<p>后来想到TNS、Internal error代表的是网络间的异常，会不会是驱动jar包的问题呢。到官网下载了一个官方的ojdbc6.jar（Oracle11g）替换了下驱动，经过测试，果然是驱动包的问题。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ORA-12155/">ORA-12155</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/异常-DevOps/">异常;DevOps</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-an-ajax-status0-error-caused-the-problem" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/an-ajax-status0-error-caused-the-problem/" class="article-date">
-  	<time datetime="2016-10-18T02:10:08.000Z" itemprop="datePublished">2016-10-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/an-ajax-status0-error-caused-the-problem/">an-ajax-status0-error-caused-the-problem</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Ajax方法接口调用时，突然遇到了status0异常，本机测试接口没有发现异常，说明接口无误。</p>
-<p>服务器接口有问题，说明是服务器的某个环节出现了问题，经过排查，发现web服务器（Apache）的磁盘空间满，清理日志文件后测试恢复正常</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status0/">status0</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-jquery-when-array" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/jquery-when-array/" class="article-date">
-  	<time datetime="2016-07-04T13:42:36.000Z" itemprop="datePublished">2016-07-04</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/jquery-when-array/">$.when(array)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var promises = [&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(4000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(2000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(5000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(1000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(6000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;&#9;ajaxs(3000).then(function(data)&#123;console.log(data)&#125;,function(data)&#123;console.log(&#39;reject:&#39;+data)&#125;),&#10;];&#10;&#10;&#10;$.when.apply($, promises).then(function(schemas) &#123;&#10;&#9;console.log(&#34;DONE&#34;, this, schemas);&#10;&#125;, function(e) &#123;&#10;&#9;console.log(&#39;FAIL&#39;);&#10;&#125;);&#10;&#10;&#10;&#10;var i=0;&#10;function ajaxs(timeout) &#123;&#10;&#9;var dtd = $.Deferred();&#10;&#9;setTimeout(function() &#123;&#10;&#9;&#9;if(i%2==0)&#123;&#10;&#9;&#9;&#9;dtd.resolve(timeout);&#10;&#9;&#9;&#125;else&#123;&#10;&#9;&#9;&#9;dtd.reject(timeout);&#10;&#9;&#9;&#125;&#10;&#9;&#9;i++;&#10;&#9;&#125;, timeout);&#10;&#9;return dtd.promise();&#10;&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/when/">when</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-mybatis-set-globle-parameter" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/mybatis-set-globle-parameter/" class="article-date">
-  	<time datetime="2016-04-05T07:29:02.000Z" itemprop="datePublished">2016-04-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/mybatis-set-globle-parameter/">Mybatis设置全局变量</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>mybatis可以设置全局变量，可以用于数据库类型的标示，比如：dbType=oracle、dbType=mysql;<br>可通过configurationProperties参数设置，设置方法如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="property">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="type">class</span>=<span class="string">"org.mybatis.spring.SqlSessionFactoryBean"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"dataSource"</span> <span class="keyword">ref</span>=<span class="string">"dataSource"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configLocation"</span> value=<span class="string">"classpath:mybatis/mybatis-config.xml"</span>/&gt;</span><br><span class="line">    &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"configurationProperties"</span>&gt;</span><br><span class="line">        &lt;props&gt;</span><br><span class="line">            &lt;<span class="keyword">prop</span> key=<span class="string">"dbType"</span>&gt;oracle&lt;/<span class="keyword">prop</span>&gt;</span><br><span class="line">        &lt;/props&gt;</span><br><span class="line">    &lt;/<span class="keyword">property</span>&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
-<p>java中获取此参数可以通过：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlSessionFactory.getConfiguration().getVariables().getProperty(<span class="string">"dbType"</span>)</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/globle-parameter/">globle parameter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mybatis/">mybatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全局变量/">全局变量</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-webuploader-cros-java" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/webuploader-cros-java/" class="article-date">
-  	<time datetime="2016-03-15T06:00:22.000Z" itemprop="datePublished">2016-03-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/webuploader-cros-java/">java实现webuploader跨域上传</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>项目中使用webuploader进行文件上传，需要用到跨域，查看webuploader的issues发现是支持上传的，但是他们写的回复都是不清不白的，有点迷糊；想了半天才知道咋回事，也可能是我比较笨，再次记录下java中详细的处理。</p>
-<p>webuploader进行上传，会执行2个请求；一个option请求，一个post（根据你的webuploader的配置method 值决定），需要在option请求中对响应头进行处理，post响应头也进行响应的处理。</p>
-<p>以servlet为例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@WebServlet</span>(description = <span class="string">"文件上传"</span>,value = &#123;<span class="string">"/file/upload"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUpload</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FileUpload</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="comment">//文件上传逻辑</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doOptions</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Credentials"</span>, <span class="string">"false"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"*"</span>);</span><br><span class="line">        resp.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"x-requested-with,content-type"</span>);</span><br><span class="line">        resp.setContentType(<span class="string">"application/json"</span>);</span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="keyword">super</span>.doOptions(req, resp);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>再次测试跨域上传，正常</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webuploader/">webuploader</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域/">跨域</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-weixin-base-userinfo-url-parameters" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/weixin-base-userinfo-url-parameters/" class="article-date">
-  	<time datetime="2016-01-08T04:08:54.000Z" itemprop="datePublished">2016-01-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/weixin-base-userinfo-url-parameters/">微信开发网页授权时URL参数问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
-<p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
-<p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意，参数必须进行编码才可行</p>
-<p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url参数/">url参数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ionic-register-back-up" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/ionic-register-back-up/" class="article-date">
-  	<time datetime="2015-12-14T01:50:38.000Z" itemprop="datePublished">2015-12-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/ionic-register-back-up/">ionic 注册返回事件</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
-<p>都不能真正的注册到真机的物理返回键上，还是物理返回键生效</p>
-<p>通过阅读ionic的api doc 才发现registerBackButtonAction其实是有3个参数的，registerBackButtonAction(callback, priority, [actionId]);</p>
-<p>priority(必须)：优先级，数值越大先执行，并且有一些特别的级别<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span>——返回上一个视图</span><br><span class="line"><span class="number">150</span>——关闭侧边按钮</span><br><span class="line"><span class="number">300</span>——关闭action sheet</span><br><span class="line"><span class="number">200</span>——取消模态框</span><br><span class="line"><span class="number">400</span>——取消popup</span><br><span class="line"><span class="number">500</span>——取消loading overlay</span><br></pre></td></tr></table></figure></p>
-<p>对了，监听物理返回键别忘了引入Cordova.js哦</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic/">ionic</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -829,8 +354,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
