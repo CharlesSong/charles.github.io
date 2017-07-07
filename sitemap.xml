@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.changeself.net//articles/part-time-summary/</loc>
+    
+    <lastmod>2017-07-07T02:52:05.846Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.changeself.net//articles/rocketmq-install-configurition/</loc>
     
-    <lastmod>2017-07-07T02:49:09.810Z</lastmod>
+    <lastmod>2017-07-07T02:51:08.052Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://www.changeself.net//articles/rocketmq-no-route-info-of-this-topic/</loc>
     
     <lastmod>2017-06-19T05:32:22.591Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.changeself.net//articles/part-time-summary/</loc>
-    
-    <lastmod>2017-01-07T09:25:49.928Z</lastmod>
     
   </url>
   
