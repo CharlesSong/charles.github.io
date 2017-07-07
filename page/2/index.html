@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/ORA-12155/" style="font-size: 10px;">ORA-12155</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/array/" style="font-size: 10px;">array</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/globle-parameter/" style="font-size: 10px;">globle parameter</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/mybatis/" style="font-size: 10px;">mybatis</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/rocketmq/" style="font-size: 10px;">rocketmq</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/spring-initializr/" style="font-size: 10px;">spring initializr</a> <a href="/tags/status0/" style="font-size: 10px;">status0</a> <a href="/tags/url参数/" style="font-size: 10px;">url参数</a> <a href="/tags/webuploader/" style="font-size: 10px;">webuploader</a> <a href="/tags/when/" style="font-size: 10px;">when</a> <a href="/tags/全局变量/" style="font-size: 10px;">全局变量</a> <a href="/tags/域名绑定/" style="font-size: 10px;">域名绑定</a> <a href="/tags/异常-DevOps/" style="font-size: 10px;">异常;DevOps</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/搭建/" style="font-size: 10px;">搭建</a> <a href="/tags/跨域/" style="font-size: 10px;">跨域</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/ORA-12155/" style="font-size: 10px;">ORA-12155</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/array/" style="font-size: 10px;">array</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/globle-parameter/" style="font-size: 10px;">globle parameter</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/mybatis/" style="font-size: 10px;">mybatis</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/rocketmq/" style="font-size: 20px;">rocketmq</a> <a href="/tags/rocketmq-4-0/" style="font-size: 10px;">rocketmq 4.0</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/spring-initializr/" style="font-size: 10px;">spring initializr</a> <a href="/tags/status0/" style="font-size: 10px;">status0</a> <a href="/tags/url参数/" style="font-size: 10px;">url参数</a> <a href="/tags/webuploader/" style="font-size: 10px;">webuploader</a> <a href="/tags/when/" style="font-size: 10px;">when</a> <a href="/tags/全局变量/" style="font-size: 10px;">全局变量</a> <a href="/tags/域名绑定/" style="font-size: 10px;">域名绑定</a> <a href="/tags/异常-DevOps/" style="font-size: 10px;">异常;DevOps</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/搭建/" style="font-size: 10px;">搭建</a> <a href="/tags/跨域/" style="font-size: 10px;">跨域</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -203,6 +203,65 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ionic-register-back-up" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/articles/ionic-register-back-up/" class="article-date">
+  	<time datetime="2015-12-14T01:50:38.000Z" itemprop="datePublished">2015-12-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/articles/ionic-register-back-up/">ionic 注册返回事件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用ionic+Angularjs开发web应用，想把web应用打包为混合应用，想实现点击返回键提示‘再点击一次退出’功能，经过实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>$ionicPlatform.registerBackButtonAction(callback)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p>都不能真正的注册到真机的物理返回键上，还是物理返回键生效</p>
+<p>通过阅读ionic的api doc 才发现registerBackButtonAction其实是有3个参数的，registerBackButtonAction(callback, priority, [actionId]);</p>
+<p>priority(必须)：优先级，数值越大先执行，并且有一些特别的级别<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span>——返回上一个视图</span><br><span class="line"><span class="number">150</span>——关闭侧边按钮</span><br><span class="line"><span class="number">300</span>——关闭action sheet</span><br><span class="line"><span class="number">200</span>——取消模态框</span><br><span class="line"><span class="number">400</span>——取消popup</span><br><span class="line"><span class="number">500</span>——取消loading overlay</span><br></pre></td></tr></table></figure></p>
+<p>对了，监听物理返回键别忘了引入Cordova.js哦</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic/">ionic</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-domain-on-github" class="article article-type-post" itemscope itemprop="blogPost">
   
