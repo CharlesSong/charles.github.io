@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.changeself.net/"/>
-  <updated>2017-07-07T02:25:29.542Z</updated>
+  <updated>2017-07-07T02:49:09.810Z</updated>
   <id>http://www.changeself.net/</id>
   
   <author>
@@ -16,15 +16,21 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>RocketMQ安装部署及配置</title>
+    <title></title>
     <link href="http://www.changeself.net//articles/rocketmq-install-configurition/"/>
     <id>http://www.changeself.net//articles/rocketmq-install-configurition/</id>
-    <published>2017-07-07T02:22:34.000Z</published>
-    <updated>2017-07-07T02:25:29.542Z</updated>
+    <published>2017-07-07T02:49:09.810Z</published>
+    <updated>2017-07-07T02:49:09.810Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Ⅰ-RocketMQ"><a href="#Ⅰ-RocketMQ" class="headerlink" title="Ⅰ.RocketMQ"></a>Ⅰ.RocketMQ</h1><p><a href="https://rocketmq.incubator.apache.org/,吐槽官方的get" target="_blank" rel="external">https://rocketmq.incubator.apache.org/,吐槽官方的get</a> started以及没有相关的配置说明。还得去扒拉未捐赠之前的资料。</p>
+    <content type="html"><![CDATA[<p>title: RocketMQ集群部署及配置<br>date: 2017-07-07 10:22:34<br>tags:</p>
+<ul>
+<li>rocketmq</li>
+<li>rocketmq 4.0</li>
+<li>集群<h1 id="Ⅰ-RocketMQ"><a href="#Ⅰ-RocketMQ" class="headerlink" title="Ⅰ.RocketMQ"></a>Ⅰ.RocketMQ</h1><a href="https://rocketmq.incubator.apache.org/,吐槽官方的get" target="_blank" rel="external">https://rocketmq.incubator.apache.org/,吐槽官方的get</a> started以及没有相关的配置说明。还得去扒拉未捐赠之前的资料。</li>
+</ul>
 <h1 id="Ⅱ-安装启动"><a href="#Ⅱ-安装启动" class="headerlink" title="Ⅱ.安装启动"></a>Ⅱ.安装启动</h1><p>   默认安装目录：/opt/apache-rocketmq-all/，进入安装目录bin目录</p>
 <h2 id="1-启动NameServer"><a href="#1-启动NameServer" class="headerlink" title="1. 启动NameServer"></a>1. 启动NameServer</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># nohup sh mqnamesrv &amp;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="2-启动Broker并指定Name-Server"><a href="#2-启动Broker并指定Name-Server" class="headerlink" title="2. 启动Broker并指定Name Server"></a>2. 启动Broker并指定Name Server</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># nohup sh mqbroker -n localhost:<span class="number">9876</span> &amp;</span></span><br></pre></td></tr></table></figure>
 <h1 id="Ⅲ-集群部署"><a href="#Ⅲ-集群部署" class="headerlink" title="Ⅲ.集群部署"></a>Ⅲ.集群部署</h1><p>   机器：10.0.9.221、10.0.9.222。集群才用多Master、多Slave的同步模式。<br>    221：BrokerA、SlaveB；222：BrokerB、SlaveA</p>
 <h2 id="1-修改配置文件"><a href="#1-修改配置文件" class="headerlink" title="1. 修改配置文件"></a>1. 修改配置文件</h2><ol>
@@ -50,14 +56,17 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Ⅰ-RocketMQ&quot;&gt;&lt;a href=&quot;#Ⅰ-RocketMQ&quot; class=&quot;headerlink&quot; title=&quot;Ⅰ.RocketMQ&quot;&gt;&lt;/a&gt;Ⅰ.RocketMQ&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://rocketmq.incubator.ap
+      &lt;p&gt;title: RocketMQ集群部署及配置&lt;br&gt;date: 2017-07-07 10:22:34&lt;br&gt;tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rocketmq&lt;/li&gt;
+&lt;li&gt;rocketmq 4.0&lt;/li&gt;
+&lt;li&gt;集群&lt;h1 id=&quot;Ⅰ-RocketMQ&quot;&gt;&lt;a href=&quot;#Ⅰ-RocketMQ&quot; class=&quot;headerlink&quot; title=&quot;Ⅰ.RocketMQ&quot;&gt;&lt;/a&gt;Ⅰ.RocketMQ&lt;/h1&gt;&lt;a href=&quot;https://rocketmq.incubator.apache.org/,吐槽官方的get&quot;&gt;https://rocketmq.incubator.apache.org/,吐槽官方的get&lt;/a&gt; started以及没有相关的配置说明。还得去扒拉未捐赠之前的资料。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Ⅱ-安装启动&quot;&gt;&lt;a href=&quot;#Ⅱ-安装启动&quot; class=&quot;headerlink&quot; title=&quot;Ⅱ.安装启动&quot;&gt;&lt;/a&gt;Ⅱ.安装启动&lt;/h1&gt;&lt;p&gt;   默认安装目录：/opt/apache-rocketmq-all/，进入安装目录bin目录&lt;/p&gt;
+&lt;h2 id=&quot;1-启动NameServer&quot;&gt;&lt;a href=&quot;#1-启动NameServer&quot; class=&quot;headerlink&quot; title=&quot;1. 启动NameServer&quot;&gt;&lt;/a&gt;1. 启动NameServer&lt;/h2&gt;&lt;figure class=&quot;highlight vala&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# nohup sh mqnamesrv &amp;amp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
-    
-      <category term="rocketmq" scheme="http://www.changeself.net/tags/rocketmq/"/>
-    
-      <category term="rocketmq 4.0" scheme="http://www.changeself.net/tags/rocketmq-4-0/"/>
     
   </entry>
   
