@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.changeself.net/"/>
-  <updated>2017-07-11T13:36:20.615Z</updated>
+  <updated>2017-07-28T02:46:52.815Z</updated>
   <id>http://www.changeself.net/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Cloud Config 发现自以为是的bug之旅</title>
+    <link href="http://www.changeself.net//articles/spring-cloud-config-find-bug-travel/"/>
+    <id>http://www.changeself.net//articles/spring-cloud-config-find-bug-travel/</id>
+    <published>2017-07-28T00:12:00.000Z</published>
+    <updated>2017-07-28T02:46:52.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>  最近开始学习Sping Cloud，在学习Spring Cloud Config的过程中，发现如果想加载本地的配置文件，需要启用spring.profiles.active=native。<br>  完整配置：<br> <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">spring</span>:</span><br><span class="line"><span class="attribute">application</span>:</span><br><span class="line">  <span class="attribute">name</span>: microservice-config</span><br><span class="line"><span class="attribute">profiles</span>:</span><br><span class="line">  <span class="attribute">active</span>: native</span><br><span class="line"><span class="attribute">cloud</span>:</span><br><span class="line">  <span class="attribute">config</span>:</span><br><span class="line">    <span class="attribute">server</span>:</span><br><span class="line">      <span class="attribute">native</span>:</span><br><span class="line">        <span class="attribute">search-locations</span>: <span class="attribute">file</span>:<span class="comment">///H://workspace//microservice-config-repo</span></span><br></pre></td></tr></table></figure></p>
+<p>  但是又使用了多环境配置多环境配置，如：<br>  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  ---</span><br><span class="line">sprin<span class="variable">g:</span></span><br><span class="line">  <span class="keyword">profile</span><span class="variable">s:</span> local</span><br><span class="line">  ---</span><br><span class="line">sprin<span class="variable">g:</span></span><br><span class="line">  <span class="keyword">profile</span><span class="variable">s:</span> dev</span><br><span class="line">  ---</span><br><span class="line">sprin<span class="variable">g:</span></span><br><span class="line">  <span class="keyword">profile</span><span class="variable">s:</span> <span class="keyword">pro</span></span><br></pre></td></tr></table></figure></p>
+<p>  刚开始，我认为多环境与配置中心的配置他俩有冲突，因为使用了多环境就没法使用native。还自以为是的认为这是一个bug,跑到spring cloud config的git issue录了个问题<a href="https://github.com/spring-cloud/spring-cloud-config/issues/757。" target="_blank" rel="external">https://github.com/spring-cloud/spring-cloud-config/issues/757。</a></p>
+<p>  后来发现原来spring.profiles.active 可以设置多个值，使用“,”分隔，无先后顺序。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  最近开始学习Sping Cloud，在学习Spring Cloud Config的过程中，发现如果想加载本地的配置文件，需要启用spring.profiles.active=native。&lt;br&gt;  完整配置：&lt;br&gt; &lt;figure class=&quot;highlight 
+    
+    </summary>
+    
+    
+      <category term="Spring Cloud" scheme="http://www.changeself.net/tags/Spring-Cloud/"/>
+    
+      <category term="Spring Cloud Config" scheme="http://www.changeself.net/tags/Spring-Cloud-Config/"/>
+    
+  </entry>
   
   <entry>
     <title>RocketMQ集群部署及配置</title>

@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/ORA-12155/" style="font-size: 10px;">ORA-12155</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/array/" style="font-size: 10px;">array</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/globle-parameter/" style="font-size: 10px;">globle parameter</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/mybatis/" style="font-size: 10px;">mybatis</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/rocketmq/" style="font-size: 20px;">rocketmq</a> <a href="/tags/rocketmq-4-0/" style="font-size: 10px;">rocketmq 4.0</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/spring-initializr/" style="font-size: 10px;">spring initializr</a> <a href="/tags/status0/" style="font-size: 10px;">status0</a> <a href="/tags/url参数/" style="font-size: 10px;">url参数</a> <a href="/tags/webuploader/" style="font-size: 10px;">webuploader</a> <a href="/tags/when/" style="font-size: 10px;">when</a> <a href="/tags/全局变量/" style="font-size: 10px;">全局变量</a> <a href="/tags/域名绑定/" style="font-size: 10px;">域名绑定</a> <a href="/tags/异常-DevOps/" style="font-size: 10px;">异常;DevOps</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/搭建/" style="font-size: 10px;">搭建</a> <a href="/tags/跨域/" style="font-size: 10px;">跨域</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/ORA-12155/" style="font-size: 10px;">ORA-12155</a> <a href="/tags/Spring-Cloud/" style="font-size: 10px;">Spring Cloud</a> <a href="/tags/Spring-Cloud-Config/" style="font-size: 10px;">Spring Cloud Config</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/array/" style="font-size: 10px;">array</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/globle-parameter/" style="font-size: 10px;">globle parameter</a> <a href="/tags/ionic/" style="font-size: 10px;">ionic</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/mybatis/" style="font-size: 10px;">mybatis</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/rocketmq/" style="font-size: 20px;">rocketmq</a> <a href="/tags/rocketmq-4-0/" style="font-size: 10px;">rocketmq 4.0</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/spring-initializr/" style="font-size: 10px;">spring initializr</a> <a href="/tags/status0/" style="font-size: 10px;">status0</a> <a href="/tags/url参数/" style="font-size: 10px;">url参数</a> <a href="/tags/webuploader/" style="font-size: 10px;">webuploader</a> <a href="/tags/when/" style="font-size: 10px;">when</a> <a href="/tags/全局变量/" style="font-size: 10px;">全局变量</a> <a href="/tags/域名绑定/" style="font-size: 10px;">域名绑定</a> <a href="/tags/异常-DevOps/" style="font-size: 10px;">异常;DevOps</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/搭建/" style="font-size: 10px;">搭建</a> <a href="/tags/跨域/" style="font-size: 10px;">跨域</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -203,6 +203,64 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-spring-cloud-config-find-bug-travel" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/articles/spring-cloud-config-find-bug-travel/" class="article-date">
+  	<time datetime="2017-07-28T00:12:00.000Z" itemprop="datePublished">2017-07-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/articles/spring-cloud-config-find-bug-travel/">Spring Cloud Config 发现自以为是的bug之旅</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  最近开始学习Sping Cloud，在学习Spring Cloud Config的过程中，发现如果想加载本地的配置文件，需要启用spring.profiles.active=native。<br>  完整配置：<br> <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">spring</span>:</span><br><span class="line"><span class="attribute">application</span>:</span><br><span class="line">  <span class="attribute">name</span>: microservice-config</span><br><span class="line"><span class="attribute">profiles</span>:</span><br><span class="line">  <span class="attribute">active</span>: native</span><br><span class="line"><span class="attribute">cloud</span>:</span><br><span class="line">  <span class="attribute">config</span>:</span><br><span class="line">    <span class="attribute">server</span>:</span><br><span class="line">      <span class="attribute">native</span>:</span><br><span class="line">        <span class="attribute">search-locations</span>: <span class="attribute">file</span>:<span class="comment">///H://workspace//microservice-config-repo</span></span><br></pre></td></tr></table></figure></p>
+<p>  但是又使用了多环境配置多环境配置，如：<br>  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  ---</span><br><span class="line">sprin<span class="variable">g:</span></span><br><span class="line">  <span class="keyword">profile</span><span class="variable">s:</span> local</span><br><span class="line">  ---</span><br><span class="line">sprin<span class="variable">g:</span></span><br><span class="line">  <span class="keyword">profile</span><span class="variable">s:</span> dev</span><br><span class="line">  ---</span><br><span class="line">sprin<span class="variable">g:</span></span><br><span class="line">  <span class="keyword">profile</span><span class="variable">s:</span> <span class="keyword">pro</span></span><br></pre></td></tr></table></figure></p>
+<p>  刚开始，我认为多环境与配置中心的配置他俩有冲突，因为使用了多环境就没法使用native。还自以为是的认为这是一个bug,跑到spring cloud config的git issue录了个问题<a href="https://github.com/spring-cloud/spring-cloud-config/issues/757。" target="_blank" rel="external">https://github.com/spring-cloud/spring-cloud-config/issues/757。</a></p>
+<p>  后来发现原来spring.profiles.active 可以设置多个值，使用“,”分隔，无先后顺序。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-Cloud/">Spring Cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-Cloud-Config/">Spring Cloud Config</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-rocketmq-install-configurition" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -702,65 +760,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webuploader/">webuploader</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域/">跨域</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-weixin-base-userinfo-url-parameters" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/articles/weixin-base-userinfo-url-parameters/" class="article-date">
-  	<time datetime="2016-01-08T04:08:54.000Z" itemprop="datePublished">2016-01-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/articles/weixin-base-userinfo-url-parameters/">微信开发网页授权时URL参数问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>微信开发通过网页授权获取用户基本信息时，可能会需要一些参数，通过验证redirect_url中的参数只能放置一个，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=appid&amp;redirect_uri=http://ip:port/app/method?appid=<span class="number">1</span>&amp;appType=service&amp;response_<span class="built_in">type</span>=code&amp;scope=snsapi_base&amp;state=<span class="number">123</span><span class="comment">#wechat_redirect</span></span><br></pre></td></tr></table></figure></p>
-<p>此时appType=service这个参数是没有的，微信平台给处理掉了</p>
-<p>想到了一种解决办法，组织参数为json字符串，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param=&#123;<span class="string">"appid"</span>:<span class="number">1</span>,<span class="string">"appType"</span>:<span class="string">"service"</span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意，参数必须进行编码才可行</p>
-<p>通过这种方式，就可以在redirect_url中添加多个参数了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url参数/">url参数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
 	</div>
 
       
